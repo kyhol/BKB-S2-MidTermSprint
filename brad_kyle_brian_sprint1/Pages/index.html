@@ -1,58 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/HomePage.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/HomePage.css" />
+  </head>
+  <body>
     <nav class="bannertop">
-        <div class="bannermascot">
-            <img src="../Images/BannerPics/mascot-of-a-quaint-diner-named-garys-diner-its-focal-point-the-most-prominent-element-in-a-backd 3.svg" alt="Mascot">
+      <div class="bannermascot">
+        <img
+          src="../Images/BannerPics/mascot-of-a-quaint-diner-named-garys-diner-its-focal-point-the-most-prominent-element-in-a-backd 3.svg"
+          alt="Mascot"
+        />
+      </div>
+      <h1 class="garybannertext">Gary Blue's Diner</h1>
+      <div class="bannerbuttons">
+        <div class="bannerbutton">
+          <a href="../Pages/menu.html" class="bannerbuttontext">Our Menu </a>
         </div>
-        <h1 class="garybannertext">Gary Blue's Diner</h1>
-        <div class="bannerbuttons">
-            <div class="bannerbutton"><a href="../Pages/menu.html" class="bannerbuttontext">Our Menu </a></div>
-            <div class="bannerbutton"><a href="../Pages/order.html" class="bannerbuttontext">Order Online</a></div>
+        <div class="bannerbutton">
+          <a href="../Pages/order.html" class="bannerbuttontext"
+            >Order Online</a
+          >
         </div>
+      </div>
     </nav>
-    <div class="bannerbottom"><a href="../Pages/order.html" class="bannerbuttontext bannerbottombutton">Hungry? ORDER NOW!</a></div>
-    <div class="main-container">
-    <div class="container">
-        <div class="foodImage fade">
-            <img src="../Images/Menu Items/Big_Gary_Sandwich.jpeg" alt="Big Gary Sandwich" >
-        </div>
-        <div class="foodImage fade">
-            <img src="../Images/Menu Items/Caesar_Salad.jpeg"  alt="Caesar Salad" >
-        </div>
-        <div class="foodImage fade">
-            <img src="../Images/Menu Items/Chili_Cheese_Fries.jpeg"  alt="Cheese fries">
-        </div>
-        <div class="foodImage fade">
-            <img src="../Images/Menu Items/Classic_Cheeseburger.jpeg"  alt="Cheeseburger" >
-        </div>
-        <div class="foodImage fade">
-            <img src="../Images/Menu Items/Gary_Blueberry_Pancakes.jpeg" alt="Blueberry pancakes" >
-        </div>
-        <div class="foodImage fade">
-            <img src="../Images/Menu Items/Southern_Fried_Chicken.jpeg" alt="fried chicken" >
-        </div>
-        <div class="foodImage fade">
-            <img src="../Images/Menu Items/Veggie_Delight_Wrap.jpeg" alt="Veggie wrap" >
-        </div>
-        <div class="foodImage fade">
-            <img src="../Images/Menu Items/Signature_Milkshake.jpeg" alt="milkshake" >
-        </div>
-        <i id="prev" onclick="show_image(-1)" class="fa-solid fa-caret-left"></i>
-        <i id="next" onclick="show_image(1)" class="fa-solid fa-caret-right"></i>
+    <div class="bannerbottom">
+      <a href="../Pages/order.html" class="bannerbuttontext bannerbottombutton"
+        >Hungry? ORDER NOW!</a
+      >
     </div>
 
-    <div class="dots">
+    <div class="main-container">
+      <div class="carousel-container">
+        <div class="container">
+          <div class="foodImage fade">
+            <img
+              src="../Images/Menu Items/Big_Gary_Sandwich.jpeg"
+              alt="Big Gary Sandwich"
+            />
+          </div>
+          <div class="foodImage fade">
+            <img
+              src="../Images/Menu Items/Caesar_Salad.jpeg"
+              alt="Caesar Salad"
+            />
+          </div>
+          <div class="foodImage fade">
+            <img
+              src="../Images/Menu Items/Chili_Cheese_Fries.jpeg"
+              alt="Cheese fries"
+            />
+          </div>
+          <div class="foodImage fade">
+            <img
+              src="../Images/Menu Items/Classic_Cheeseburger.jpeg"
+              alt="Cheeseburger"
+            />
+          </div>
+          <div class="foodImage fade">
+            <img
+              src="../Images/Menu Items/Gary_Blueberry_Pancakes.jpeg"
+              alt="Blueberry pancakes"
+            />
+          </div>
+          <div class="foodImage fade">
+            <img
+              src="../Images/Menu Items/Southern_Fried_Chicken.jpeg"
+              alt="fried chicken"
+            />
+          </div>
+          <div class="foodImage fade">
+            <img
+              src="../Images/Menu Items/Veggie_Delight_Wrap.jpeg"
+              alt="Veggie wrap"
+            />
+          </div>
+          <div class="foodImage fade">
+            <img
+              src="../Images/Menu Items/Signature_Milkshake.jpeg"
+              alt="milkshake"
+            />
+          </div>
+          <i
+            id="prev"
+            onclick="show_image(-1)"
+            class="fa-solid fa-caret-left"
+          ></i>
+          <i
+            id="next"
+            onclick="show_image(1)"
+            class="fa-solid fa-caret-right"
+          ></i>
+        </div>
+      </div>
+
+      <div class="dots">
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
@@ -61,8 +118,8 @@
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
+      </div>
     </div>
-</div>
     <script src="../Scripts/home-page.js"></script>
-</body>
+  </body>
 </html>
