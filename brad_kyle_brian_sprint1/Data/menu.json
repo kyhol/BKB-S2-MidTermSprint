@@ -3,52 +3,62 @@
     {
       "item_name": "Big Gary Chicken Sandwich",
       "price": 12.99,
-      "description": "A hearty sandwich featuring a crispy, golden-fried chicken breast, topped with lettuce, tomato, pickles, and Gary's special sauce on a toasted brioche bun."
+      "description": "A hearty sandwich featuring a crispy, golden-fried chicken breast, topped with lettuce, tomato, pickles, and Gary's special sauce on a toasted brioche bun.",
+      "image": "../Images/Menu Items/Big_Gary_Sandwich.jpeg"
     },
     {
       "item_name": "Classic Cheeseburger",
       "price": 10.99,
-      "description": "Juicy beef patty with melted cheddar cheese, lettuce, tomato, onions, and pickles on a sesame seed bun. Served with a side of fries."
+      "description": "Juicy beef patty with melted cheddar cheese, lettuce, tomato, onions, and pickles on a sesame seed bun. Served with a side of fries.",
+      "image": "../Images/Menu Items/Classic_Cheeseburger.jpeg"
     },
     {
       "item_name": "Gary's Blueberry Pancakes",
       "price": 9.99,
-      "description": "Fluffy pancakes packed with fresh blueberries, served with maple syrup and a dollop of whipped cream."
+      "description": "Fluffy pancakes packed with fresh blueberries, served with maple syrup and a dollop of whipped cream.",
+      "image": "../Images/Menu Items/Gary_Blueberry_Pancakes.jpeg"
     },
     {
       "item_name": "Southern Fried Chicken",
       "price": 13.99,
-      "description": "Buttermilk-marinated chicken fried to perfection, served with creamy mashed potatoes, gravy, and sautéed green beans."
+      "description": "Buttermilk-marinated chicken fried to perfection, served with creamy mashed potatoes, gravy, and sautéed green beans.",
+      "image": "../Images/Menu Items/Southern_Fried_Chicken.jpeg"
     },
     {
       "item_name": "Classic Caesar Salad",
       "price": 8.99,
-      "description": "Crisp romaine lettuce tossed with Caesar dressing, croutons, and Parmesan cheese. Add grilled chicken for $3.00."
+      "description": "Crisp romaine lettuce tossed with Caesar dressing, croutons, and Parmesan cheese. Add grilled chicken for $3.00.",
+      "image": "../Images/Menu Items/Caesar_Salad.jpeg"
     },
     {
       "item_name": "Gary's Chili Cheese Fries",
       "price": 6.99,
-      "description": "Golden fries smothered in homemade chili and melted cheddar cheese. Topped with green onions and a dollop of sour cream."
+      "description": "Golden fries smothered in homemade chili and melted cheddar cheese. Topped with green onions and a dollop of sour cream.",
+      "image": "../Images/Menu Items/Chili_Cheese_Fries.jpeg"
     },
     {
       "item_name": "Veggie Delight Wrap",
       "price": 9.49,
-      "description": "A wholesome wrap filled with roasted veggies, hummus, mixed greens, and a tangy vinaigrette. Served with a side of fresh fruit."
+      "description": "A wholesome wrap filled with roasted veggies, hummus, mixed greens, and a tangy vinaigrette. Served with a side of fresh fruit.",
+      "image": "../Images/Menu Items/Veggie_Delight_Wrap.jpeg"
     },
     {
       "item_name": "Blue's Fish & Chips",
       "price": 14.99,
-      "description": "Beer-battered fish fillets served with crispy fries, tartar sauce, and coleslaw."
+      "description": "Beer-battered fish fillets served with crispy fries, tartar sauce, and coleslaw.",
+      "image": "../Images/Menu Items/Fish_n_Chips.jpeg"
     },
     {
       "item_name": "Country Breakfast",
       "price": 11.49,
-      "description": "Two eggs any style, bacon or sausage, home fries, and a fluffy buttermilk biscuit with sausage gravy."
+      "description": "Two eggs any style, bacon or sausage, home fries, and a fluffy buttermilk biscuit with sausage gravy.",
+      "image": "../Images/Menu Items/Garys_Breakfast.jpeg"
     },
     {
       "item_name": "Gary's Signature Milkshake",
       "price": 5.99,
-      "description": "Creamy milkshake available in chocolate, vanilla, or strawberry, topped with whipped cream and a cherry."
+      "description": "Creamy milkshake available in chocolate, vanilla, or strawberry, topped with whipped cream and a cherry.",
+      "image": "../Images/Menu Items/Signature_Milkshake.jpeg"
     }
   ]
 }
