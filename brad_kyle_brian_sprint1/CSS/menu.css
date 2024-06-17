@@ -1,13 +1,5 @@
-.main-container {
-  max-width: 1200px;
-  width: 80%;
-  margin: 0 auto;
-  background-color: #f9f9f9;
-  padding: 24px;
-}
-
 .main-menu-div {
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;

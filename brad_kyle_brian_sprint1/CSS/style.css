@@ -1,5 +1,17 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  background-color: #f9f9f9;
+  max-width: 100dvw;
+  width: calc(100% - 18rem);
+  margin: 16px;
+  margin-inline: auto;
+  height: 100dvh;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
 }
