@@ -17,6 +17,8 @@
 
 #column2 {
   background-color: #E8F7FB;
+  display: flex;
+  flex-direction: column;
 }
 
 #column1 {
@@ -101,7 +103,7 @@
 
   #button1 {
     align-self: center;
-    margin-top: 20%;
+    margin-top: 15%;
     background-color: #6F7DFB;
     color: #E8F7FB;
     width: 30%;
@@ -157,4 +159,9 @@
 #cvv {
   width: 30%;
   margin-left: 15%;
+}
+
+#more {
+  width: 30%;
+  margin-left: 60%;
 }
