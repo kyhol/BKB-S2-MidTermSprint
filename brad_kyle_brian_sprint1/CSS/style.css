@@ -4,7 +4,7 @@
   width: calc(100% - 18rem);
   margin: 16px;
   margin-inline: auto;
-  max-height: 100dvh;
+  /* max-height: 100dvh; */
   padding: 16px;
 }
 
