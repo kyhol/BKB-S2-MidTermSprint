@@ -5,6 +5,7 @@
 }
 
 .bannertop {
+    position:static;
   width: 100%;
   height: 112px;
   flex-shrink: 0;
@@ -93,25 +94,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   border: 1px solid black;
   margin-inline: auto;
   margin-top: 16px;
   padding: 16px;
   border-radius: 4px;
   background-color: #f9f9f9;
+  position: relative;
 }
 
-.carousel-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
+
+
 
 #prev {
   position: absolute;
-  left: 0;
+
   color: white;
   cursor: pointer;
   padding: 16px;
@@ -120,11 +118,11 @@
   transition: 0.6s ease;
   border-radius: 0 5px 5px 0;
   user-select: none;
+  left: 20px;
 }
 #next {
-  position: absolute;
+    position:absolute;
   color: white;
-  right: 0;
   cursor: pointer;
   padding: 16px;
   font-weight: bold;
@@ -132,6 +130,8 @@
   transition: 0.6s ease;
   border-radius: 0 5px 5px 0;
   user-select: none;
+  right: 20px;
+  
 }
 
 #prev:hover,
@@ -140,10 +140,12 @@
 }
 
 .dots {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: 2%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    bottom: 5rem;
+    width: 100%;
 }
 
 .dot {
@@ -156,7 +158,6 @@
   justify-content: space-between;
   position: relative;
   transition: background-color 0.6s ease;
-  bottom: 75px;
 }
 
 .active {
@@ -186,4 +187,57 @@
   width: 100%;
   height: 100%;
   border-radius: 23px;
+}
+
+.biocontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100dvw;
+    width:100%;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    
+}
+
+.biocontainer2 {
+    width: 75.6875rem;
+    height: 41.0625rem;
+    border-radius: 2.5rem;
+    background: #023047;
+}
+
+#bio {
+    padding:3rem;
+    text-align: left;
+    color: #f9f9f9;
+    font-family: 'Poppins';
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h2 {
+    color: #da722c;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding-top: 1rem;
+    opacity: 0.9;
+
+}
+
+#gblue {
+    color: #057ADA;
+    font-family: 'Poppins';
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding-top: 1rem;
+    opacity: 0.9;
 }
