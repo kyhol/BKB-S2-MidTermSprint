@@ -4,8 +4,10 @@
   width: calc(100% - 18rem);
   margin: 16px;
   margin-inline: auto;
-  /* max-height: 100dvh; */
+  min-height: 100dvh;
+  height: 100%;
   padding: 16px;
+  position: relative;
 }
 
 footer {
@@ -16,7 +18,8 @@ footer {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  position: fixed;
+  position: static;
+
   bottom: 0;
   left: 0;
 }
@@ -106,6 +109,10 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+body {
+  min-height: 100%;
 }
 
 /* MEDIA QUERIES */
