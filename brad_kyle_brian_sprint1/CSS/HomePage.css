@@ -94,7 +94,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc(100% - 18rem);
+
+  border: 1px solid black;
   margin-inline: auto;
   margin-top: 16px;
   padding: 16px;
@@ -103,8 +104,12 @@
   position: relative;
 }
 
-#prev  { 
-    position:absolute;
+
+
+
+#prev {
+  position: absolute;
+
   color: white;
   cursor: pointer;
   padding: 16px;
