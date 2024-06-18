@@ -4,77 +4,146 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/HomePage.css">
-</head>
-<body>
-        <nav class="bannertop">
-            <div class="bannermascot">
-                <img src="../Images/BannerPics/mascot-of-a-quaint-diner-named-garys-diner-its-focal-point-the-most-prominent-element-in-a-backd 3.svg" alt="Mascot">
-            </div>
-            <h1 class="garybannertext">Gary Blue's Diner</h1>
-            <div class="bannerbuttons">
-                <div class="bannerbutton"><a href="../Pages/menu.html" class="bannerbuttontext">Our Menu</a></div>
-                <div class="bannerbutton"><a href="../Pages/order.html" class="bannerbuttontext">Order Online</a></div>
-            </div>
-        </nav>
-        <div class="bannerbottom"><a href="../Pages/order.html" class="bannerbuttontext bannerbottombutton">Hungry? ORDER NOW!</a></div>
-        <div class="main-container">
-        <div class="container">
-            <i id="prev" onclick="show_image(-1)" class="fa-solid fa-caret-left"></i>
-            <div class="foodImage fade">
-                <img src="../Images/Menu Items/Big_Gary_Sandwich.jpeg" alt="Big Gary Sandwich">
-            </div>
-            <div class="foodImage fade">
-                <img src="../Images/Menu Items/Caesar_Salad.jpeg" alt="Caesar Salad">
-            </div>
-            <div class="foodImage fade">
-                <img src="../Images/Menu Items/Chili_Cheese_Fries.jpeg" alt="Cheese fries">
-            </div>
-            <div class="foodImage fade">
-                <img src="../Images/Menu Items/Classic_Cheeseburger.jpeg" alt="Cheeseburger">
-            </div>
-            <div class="foodImage fade">
-                <img src="../Images/Menu Items/Gary_Blueberry_Pancakes.jpeg" alt="Blueberry pancakes">
-            </div>
-            <div class="foodImage fade">
-                <img src="../Images/Menu Items/Southern_Fried_Chicken.jpeg" alt="fried chicken">
-            </div>
-            <div class="foodImage fade">
-                <img src="../Images/Menu Items/Veggie_Delight_Wrap.jpeg" alt="Veggie wrap">
-            </div>
-            <div class="foodImage fade">
-                <img src="../Images/Menu Items/Signature_Milkshake.jpeg" alt="milkshake">
-            </div>
-            <i id="next" onclick="show_image(1)" class="fa-solid fa-caret-right"></i>
-            <div class="dots">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/HomePage.css" />
+  </head>
+  <body>
+    <nav class="bannertop">
+      <div class="bannermascot">
+        <img
+          src="../Images/BannerPics/mascot-of-a-quaint-diner-named-garys-diner-its-focal-point-the-most-prominent-element-in-a-backd 3.svg"
+          alt="Mascot"
+        />
+      </div>
+      <h1 class="garybannertext">Gary Blue's Diner</h1>
+      <div class="bannerbuttons">
+        <div class="bannerbutton">
+          <a href="../Pages/menu.html" class="bannerbuttontext">Our Menu</a>
         </div>
-        
+        <div class="bannerbutton">
+          <a href="../Pages/order.html" class="bannerbuttontext"
+            >Order Online</a
+          >
+        </div>
+      </div>
+    </nav>
+    <div class="bannerbottom">
+      <a href="../Pages/order.html" class="bannerbuttontext bannerbottombutton"
+        >Hungry? ORDER NOW!</a
+      >
+    </div>
+    <div class="main-container">
+      <div class="container">
+        <i
+          id="prev"
+          onclick="show_image(-1)"
+          class="fa-solid fa-caret-left"
+        ></i>
+        <div class="foodImage fade">
+          <img
+            src="../Images/Menu Items/Big_Gary_Sandwich.jpeg"
+            alt="Big Gary Sandwich"
+          />
+        </div>
+        <div class="foodImage fade">
+          <img
+            src="../Images/Menu Items/Caesar_Salad.jpeg"
+            alt="Caesar Salad"
+          />
+        </div>
+        <div class="foodImage fade">
+          <img
+            src="../Images/Menu Items/Chili_Cheese_Fries.jpeg"
+            alt="Cheese fries"
+          />
+        </div>
+        <div class="foodImage fade">
+          <img
+            src="../Images/Menu Items/Classic_Cheeseburger.jpeg"
+            alt="Cheeseburger"
+          />
+        </div>
+        <div class="foodImage fade">
+          <img
+            src="../Images/Menu Items/Gary_Blueberry_Pancakes.jpeg"
+            alt="Blueberry pancakes"
+          />
+        </div>
+        <div class="foodImage fade">
+          <img
+            src="../Images/Menu Items/Southern_Fried_Chicken.jpeg"
+            alt="fried chicken"
+          />
+        </div>
+        <div class="foodImage fade">
+          <img
+            src="../Images/Menu Items/Veggie_Delight_Wrap.jpeg"
+            alt="Veggie wrap"
+          />
+        </div>
+        <div class="foodImage fade">
+          <img
+            src="../Images/Menu Items/Signature_Milkshake.jpeg"
+            alt="milkshake"
+          />
+        </div>
+        <i
+          id="next"
+          onclick="show_image(1)"
+          class="fa-solid fa-caret-right"
+        ></i>
+        <div class="dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
 
-        
-        <div class="biocontainer">
-            <div class="biocontainer2">
-                <h2>Gary <span id="gblue">Blue</span>: The Culinary Maestro</h2>
-                <p id="bio">
-                    Gary Blue, the enigmatic owner of Gary Blue's Diner, is a man of mythic proportions. With a handlebar mustache that could rival a walrus's tusks and a collection of Hawaiian shirts that would make Magnum P.I. jealous, Gary is a true icon of the culinary world. <br><br>
-                    Legend has it that Gary was born with a spatula in one hand and a whisk in the other, destined for greatness in the realm of diners. He learned the secret art of flipping pancakes at the tender age of three and could grill a burger to perfection by the time he was five.<br><br>
-                    Gary's Diner is not just a place to eat; it's a pilgrimage for foodies far and wide. The menu is a testament to Gary's wild imagination, featuring dishes like the "Blue-Ribbon Burger," a towering monstrosity of beef, bacon, and blue cheese, and the "Supernova Sundae," a dessert so decadent it requires a waiver to be signed before indulging. <br><br>
-                    Despite his culinary prowess, Gary remains humble, always greeting customers with a smile and a twinkle in his eye. His diner is not just a business; it's a haven for those seeking comfort, adventure, and the occasional food coma. Long live Gary Blue, the king of diners!
-                </p>
-            </div>
+      <div class="biocontainer">
+        <div class="biocontainer2">
+          <h2>Gary <span id="gblue">Blue</span>: The Culinary Maestro</h2>
+          <p id="bio">
+            Gary Blue, the enigmatic owner of Gary Blue's Diner, is a man of
+            mythic proportions. With a handlebar mustache that could rival a
+            walrus's tusks and a collection of Hawaiian shirts that would make
+            Magnum P.I. jealous, Gary is a true icon of the culinary world.
+            <br /><br />
+            Legend has it that Gary was born with a spatula in one hand and a
+            whisk in the other, destined for greatness in the realm of diners.
+            He learned the secret art of flipping pancakes at the tender age of
+            three and could grill a burger to perfection by the time he was
+            five.<br /><br />
+            Gary's Diner is not just a place to eat; it's a pilgrimage for
+            foodies far and wide. The menu is a testament to Gary's wild
+            imagination, featuring dishes like the "Blue-Ribbon Burger," a
+            towering monstrosity of beef, bacon, and blue cheese, and the
+            "Supernova Sundae," a dessert so decadent it requires a waiver to be
+            signed before indulging. <br /><br />
+            Despite his culinary prowess, Gary remains humble, always greeting
+            customers with a smile and a twinkle in his eye. His diner is not
+            just a business; it's a haven for those seeking comfort, adventure,
+            and the occasional food coma. Long live Gary Blue, the king of
+            diners!
+          </p>
         </div>
+      </div>
     </div>
     <script src="../Scripts/home-page.js"></script>
   </body>
