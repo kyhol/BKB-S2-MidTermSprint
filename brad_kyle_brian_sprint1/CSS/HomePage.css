@@ -33,6 +33,7 @@
   font-size: 3rem;
   font-weight: 700;
   margin-right: 20rem;
+
 }
 
 .bannerbuttons {
@@ -90,7 +91,8 @@
   background-color: #a34a0f;
 }
 .container {
-  height: 100%;
+    width: 85.125rem;
+    height: 50.6875rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -183,6 +185,10 @@
   border-radius: 23px;
 }
 
+svg {
+    width: 100%;
+}
+
 .biocontainer {
   display: flex;
   justify-content: center;
@@ -191,6 +197,7 @@
   width: 100%;
   flex-direction: column;
   background-color: #f9f9f9;
+  margin-top: 3rem;
 }
 
 .biocontainer2 {
@@ -214,7 +221,7 @@
 h2 {
   color: #da722c;
   text-align: center;
-  font-family: "Poppins";
+  font-family: "Raleway";
   font-size: 2rem;
   font-style: normal;
   font-weight: 800;
@@ -252,32 +259,28 @@ h2 {
 .slider-container .fa-caret-left,
 .slider-container .fa-caret-right {
     display: flex;
-    font-size: 2rem;
     color: #000;
     background-color: #da722c;
     cursor: pointer;
     user-select: none;
-}
-.slider-container .fa-caret-left {
-    left: 10px;
+    
 }
 
-.slider-container .fa-caret-right {
-    right: 10px;
-}
-
-#prevReview1, #prevReview2, #nextReview1, #nextReview2 {
+#prevReview1, #nextReview1 {
     display: flex;
     color: white;
     cursor: pointer;
-    padding: 16px;
+    padding:0.6rem;
     font-weight: bold;
     font-size: 1rem;
     transition: 0.6s ease;
-    border-radius: 0 5px 5px 0;
     user-select: none;
+    border-radius: 50%;
 }
 
+#prevReview1:hover, #nextReview1:hover {
+    background-color: #a34a0f;
+}
 .deliverMenuContainer {
     display: flex;
     align-items: center;
@@ -359,3 +362,17 @@ h2 {
         align-items: center;
         position: relative;
     }
+.garybannertext a {
+  color: #e8f7fb;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+}
+
+.garybannertext a:hover {
+  color: #6F7DFB;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.7);
+  text-decoration: wavy;
+}
