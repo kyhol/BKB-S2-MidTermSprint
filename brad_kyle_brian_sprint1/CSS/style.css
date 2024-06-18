@@ -19,12 +19,18 @@ footer {
   align-items: center;
   width: 100%;
   position: static;
+
   bottom: 0;
+  left: 0;
 }
 
 #footerlogo {
   width: 60px;
   margin: 5px;
+}
+
+#filler {
+  width: 20%;
 }
 
 #socials {
