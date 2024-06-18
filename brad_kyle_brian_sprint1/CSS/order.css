@@ -1,0 +1,129 @@
+#columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-bottom: 50px;
+}
+
+#column1, #column2 {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    border: #6F7DFB 1px solid;
+    padding: 10px;
+}
+  
+#name, #phone, #email, #address, #card, #cardvalid {
+    flex: 1;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    padding-right: 31px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 90%;
+  }
+
+#cardvalid{
+    display: flex;
+    justify-content: space-between;
+}
+  
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
+    border-top: none;
+    background-color: #fff;
+    z-index: 99;
+    top: calc(100% + 2px);
+    left: 0;
+    right: 0;
+  }
+  
+  .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .autocomplete-items div:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .autocomplete-items .autocomplete-active {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .clear-button {
+    color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    
+    position: absolute;
+    right: 5px;
+    top: 0;
+  
+    height: 100%;
+    display: none;
+    align-items: center;
+  }
+  
+  .clear-button.visible {
+    display: flex;
+  }
+  
+  .clear-button:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  button {
+    align-self: center;
+    margin: 5%;
+    background-color: #6F7DFB;
+    color: #E8F7FB;
+    width: 30%;
+    height: 50px;
+    border-radius: 25px;
+    font-size: larger;
+  }
+
+#orderinnerhtml {
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    width: 100%;
+    padding-right: 30px;
+}
+
+.clear-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none;
+}
+
+.clear-button.visible {
+    display: flex;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
