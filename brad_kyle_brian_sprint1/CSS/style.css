@@ -26,6 +26,10 @@ footer {
   margin: 5px;
 }
 
+#filler {
+  width: 20%;
+}
+
 #socials {
   margin-right: 10px;
   width: 33%;
