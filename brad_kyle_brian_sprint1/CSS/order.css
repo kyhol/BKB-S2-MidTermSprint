@@ -170,3 +170,52 @@
   padding: 5px;
   width: 100%;
 }
+
+#orderContainer {
+    display: none;
+    background-color: #E8F7FB;
+    color: #DA722C;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 950px;
+    height: 500px;
+    border-radius: 25px;
+    padding: 16px 8px 8px;
+    box-sizing: border-box;
+    margin-top: 100px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2;
+    border: 80px solid transparent;
+    border-image: url(pattern.png) 100 round;
+}
+
+#orderContainer button {
+    background-color: #DA722C;
+    display: inline-block;
+    border-radius: 5px;
+    border: 2px solid #6F7DFB;
+    padding: 5px;
+    text-align: center;
+    width: 300px;
+    height: 80px;
+    color: #E8F7FB;
+    font-size: xx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#orderContainer button:hover {
+    background-color: #E8F7FB;
+    color: #6F7DFB;
+    border: 3px solid #DA722C;
+    transition: 0.5s;
+}
+
+#message {
+    text-align: center;
+    padding: 10px 30px;
+    font-size: 30px;
+}
