@@ -190,7 +190,7 @@
     align-items: center;
     z-index: 2;
     border: 80px solid transparent;
-    border-image: url(pattern.png) 100 round;
+    border-image: url(../Images/OrderPics/pattern.png) 100 round;
 }
 
 #orderContainer button {
