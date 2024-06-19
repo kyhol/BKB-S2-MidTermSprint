@@ -1,6 +1,5 @@
 .menu-page-div {
   font-family: poppins;
-
   width: 100%;
   height: 100%;
   display: flex;
@@ -12,6 +11,7 @@
   width: 100%;
   height: 100%;
 }
+
 .menu-section {
   width: 100%;
   display: grid;
@@ -48,8 +48,8 @@
   box-shadow: 4px 4px 5px 1px rgba(69, 69, 69, 1);
   border-radius: 4px;
   transition: transform 0.2s ease;
-  padding: 8px;
   list-style-type: none;
+  position: relative;
 }
 
 .addon-card {
@@ -58,6 +58,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
   padding: 16px;
+  gap: 6px;
 }
 
 .addon-card li {
@@ -66,7 +67,7 @@
 }
 
 .menu-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .name-and-price {
@@ -100,6 +101,60 @@
   max-height: 125px;
   margin: 8px;
   border-radius: 4px;
+}
+
+/* Add to Cart button styling */
+.add-to-cart-btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #057ada;
+  color: #da722c;
+  font-weight: bold;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Show the button on hover */
+.menu-card:hover .add-to-cart-btn,
+.addon-card li:hover .add-to-cart-btn {
+  display: block;
+}
+
+/* Position relative for containing block */
+#addon-card li {
+  position: relative;
+}
+
+/* Add to Cart button styling for addon items */
+#addon-card li {
+  position: relative;
+}
+
+#addon-card li .add-to-cart-btn {
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #057ada;
+  color: #da722c;
+  border: none;
+  padding: 2px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Show the button on hover for each addon item */
+#addon-card li:hover .add-to-cart-btn {
+  display: block;
 }
 
 /* MEDIA QUERIES */
