@@ -290,17 +290,18 @@ function orderAlert(msg, gfg) {
             alert("Expiry date cannot be in the past.");
         }
 
-        if (laterRadio.checked) {
+          if (laterRadio.checked) {
             const orderTime = new Date(orderTimeInput.value);
             if (orderTime < today) {
-                valid = false;
-                alert("Order time cannot be in the past.");
+              valid = false;
+              alert("Order time cannot be in the past.");
             }
-        }
+          }
 
-        if (valid) {
+          if (valid) {
             orderAlert("Thank you for your order!\nHang tight, Gary is getting your goodies\nready to GO!", function() {
-        console.log("Alert confirmed");
-        }
-    });
-});
+              console.log("Alert confirmed");
+            });
+          }
+          });
+        });
