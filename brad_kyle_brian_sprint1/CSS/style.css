@@ -18,7 +18,8 @@ footer {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  position: static;
+  height: 60px;
+  position: fixed;
   z-index: 3;
   bottom: 0;
   left: 0;
@@ -30,14 +31,22 @@ footer {
 }
 
 #filler {
-  width: 5%;
+  width: 10%;
+}
+#copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 40%;
+  align-items: center;
 }
 
 #socials {
   margin-right: 10px;
-  width: 33%;
+  width: 40%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 #socials img:hover {

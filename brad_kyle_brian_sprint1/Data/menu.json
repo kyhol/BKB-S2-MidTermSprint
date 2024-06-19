@@ -91,14 +91,14 @@
           "price": 12.99
         },
         {
-          "item_name": "Smashburger",
-          "description": "One juicy beef patties smashed and seared, topped with American cheese, lettuce, tomato, onion, and pickles on a toasted sesame bun.",
+          "item_name": "Classic Cheeseburger",
+          "description": "One juicy beef patty flame grilled, topped with American cheese, lettuce, tomato, onion, and pickles on a toasted sesame bun.",
           "src": "../Images/Menu Items/Smashburger.jpeg",
           "price": 11.99
         },
         {
-          "item_name": "Double Smashburger",
-          "description": "Two juicy beef patties smashed and seared, topped with American cheese, lettuce, tomato, onion, and pickles on a toasted sesame bun.",
+          "item_name": "Double Cheeseburger",
+          "description": "Two juicy beef patties flame grilled, topped with American cheese, lettuce, tomato, onion, and pickles on a toasted sesame bun.",
           "src": "../Images/Menu Items/Double_Smashburger.jpeg",
           "price": 11.99
         },
@@ -113,6 +113,12 @@
           "description": "Beer-battered fish fillets served with crispy fries, tartar sauce, and coleslaw.",
           "src": "../Images/Menu Items/Fish_n_Chips.jpeg",
           "price": 14.99
+        },
+        {
+          "item_name": "Caesar Salad",
+          "description": "Crisp romaine lettuce, croutons, and parmesan cheese tossed in Caesar dressing.",
+          "src": "../Images/Menu Items/Classic_Caesar.jpeg",
+          "price": 9.99
         }
       ],
       "addons": [
@@ -230,6 +236,12 @@
           "description": "Fudgy brownie topped with colorful candy-coated chocolate pieces and a rich chocolate frosting.",
           "src": "../Images/Menu Items/Cosmic_Brownie.jpeg",
           "price": 4.99
+        },
+        {
+          "item_name": "Signature Milkshake",
+          "description": "Fudgy brownie topped with colorful candy-coated chocolate pieces and a rich chocolate frosting.",
+          "src": "../Images/Menu Items/Signature_Milkshake.jpeg",
+          "price": 8.99
         }
       ]
     }
