@@ -1,7 +1,7 @@
+/* Main Menu page Layout */
+
 .menu-page-div {
   font-family: poppins;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,12 +12,17 @@
   height: 100%;
 }
 
+/* This is defining each menu section (Breakfast, lunch, dinner, dessert) */
+
 .menu-section {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
+  margin-top: 16px;
 }
+
+/* Just styling the header and "metadata" of each section */
 
 .menu-section-info {
   width: 100%;
@@ -39,11 +44,14 @@
   margin-bottom: 8px;
 }
 
+/* This menu-card is for each item in a section of them menu. */
+
 .menu-card {
   background-color: #ffffff;
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   box-shadow: 4px 4px 5px 1px rgba(69, 69, 69, 1);
   border-radius: 4px;
@@ -51,57 +59,76 @@
   list-style-type: none;
   position: relative;
 }
-
-.addon-card {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  list-style: none;
-  padding: 16px;
-  gap: 6px;
-}
-
-.addon-card li {
-  font-weight: bold;
-  text-align: center;
-}
-
-.menu-card:hover {
-  transform: scale(1.05);
-}
-
 .name-and-price {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 16px;
 }
-
 .name-and-price h4 {
   font-size: 1.2rem;
 }
-
 .name-and-price span {
   font-size: 1rem;
 }
-
 .image_desc {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .menu-card p {
   padding: 16px;
   line-height: 1.5;
 }
-
 .menu-card-img {
   max-width: 125px;
   max-height: 125px;
   margin: 8px;
   border-radius: 4px;
 }
+.menu-card:hover {
+  transform: scale(1.05);
+}
+
+/* Each menu section contains one addon card for items that can be added to your order. the contents are slightly different on these so i chose to style them a little bit differently than the menu card */
+
+.addon-card {
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 4px 4px 5px 1px rgba(69, 69, 69, 1);
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+  list-style-type: none;
+  position: relative;
+}
+.addon-card ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+  padding: 16px;
+  gap: 8px;
+  font-size: 0.8rem;
+}
+.addon-card h3 {
+  width: 80%;
+  color: #da722c;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 8px;
+  border-bottom: 2px solid #da722c;
+}
+.addon-card li {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* This is a slightly different section for the add to cart button that displays on hover of the menu card, and on the individual items on the addon cards in each section. */
 
 /* Add to Cart button styling */
 .add-to-cart-btn {
@@ -120,6 +147,11 @@
   z-index: 10;
 }
 
+.add-to-cart-btn:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
 /* Show the button on hover */
 .menu-card:hover .add-to-cart-btn,
 .addon-card li:hover .add-to-cart-btn {
@@ -127,11 +159,6 @@
 }
 
 /* Position relative for containing block */
-#addon-card li {
-  position: relative;
-}
-
-/* Add to Cart button styling for addon items */
 #addon-card li {
   position: relative;
 }
@@ -158,19 +185,44 @@
 }
 
 /* MEDIA QUERIES */
-
+/* I chose these breakpoints based on a recommendation from chatGPT to cover generalized points for phones and tablets differently in most instances. */
+/* =============================================== */
 /* Tablet View */
 @media (max-width: 768px) {
   .menu-page-div {
-    padding: 8px;
+    padding: 0px;
     width: 100%;
   }
-  .menu-card {
+  .menu-section {
+    margin-top: 0px;
+    gap: 16px;
+  }
+
+  .menu-card p {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+  .addon-card {
+    display: flex;
+  }
+  .addon-card ul {
     width: 100%;
-    margin: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    padding: 8px;
+    gap: 6px;
+    font-size: 0.7rem;
+  }
+  .addon-card h3 {
+    font-size: 1.2rem;
   }
   .menu-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
+  }
+  .add-to-cart-btn:hover {
+    transform: translate(-50%, -50%) scale(1.02);
+    transition: transform 0.3s ease-in-out;
   }
 }
 
@@ -179,20 +231,57 @@
   .menu-page-div {
     padding: 0;
     width: 100%;
+    justify-content: center;
+    align-items: center;
   }
-
+  .menu-section {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-section-info {
+    padding: 8px;
+    text-align: center;
+  }
   .menu-card {
-    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 90%;
     margin: 8px;
   }
   .menu-card-img {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
   }
   .name-and-price {
+    width: 100%;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     gap: 8px;
+  }
+  .name-and-price h4 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .menu-card p {
+    display: none;
+  }
+  .addon-card {
+    display: flex;
+    width: 90%;
+  }
+  .addon-card ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    padding: 8px;
+    gap: 4px;
+    font-size: 0.7rem;
   }
   .menu-card:hover {
     transform: scale(1.05);

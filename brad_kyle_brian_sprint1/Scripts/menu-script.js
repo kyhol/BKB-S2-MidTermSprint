@@ -38,9 +38,9 @@ window.addEventListener("DOMContentLoaded", function () {
         let addonsHtml = "";
         if (menuData.addons && menuData.addons.length > 0) {
           addonsHtml += `
-            <div class="menu-card" id="addon-card">
-              <h2>Addons</h2>
-              <ul class="addon-card">
+            <div class="addon-card" id="addon-card">
+              <h3>Addons</h3>
+              <ul>
           `;
           menuData.addons.forEach((addon) => {
             addonsHtml += `
@@ -50,7 +50,7 @@ window.addEventListener("DOMContentLoaded", function () {
                   data-itemName="${addon.addon_name}"
                   data-price="${addon.price.toFixed(2)}"
                   data-type="addon"
-                >Add ${addon.addon_name} to Cart</button>
+                >Add to Cart</button>
               </li>
             `;
           });
