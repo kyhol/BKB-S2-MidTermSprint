@@ -119,7 +119,7 @@ Date finished: 2024-06-21? */
   transition: 0.6s ease;
   border-radius: 0 5px 5px 0;
   user-select: none;
-  left: 20px;
+  left: 30px;
 }
 #next {
   position: absolute;
@@ -131,7 +131,7 @@ Date finished: 2024-06-21? */
   transition: 0.6s ease;
   border-radius: 0 5px 5px 0;
   user-select: none;
-  right: 20px;
+  right: 30px;
 }
 
 #prev:hover,
@@ -225,6 +225,7 @@ svg {
 }
 
 h2 {
+
   color: #da722c;
   text-align: center;
   font-family: "Raleway";
@@ -459,3 +460,368 @@ h2 {
     font-weight: normal;
 }
 
+.location {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.location img {
+    border-radius: 23px;
+    height: 253px; 
+    width: 364px;
+    transition: transform 0.3s; /* Add a transition for a smooth effect */
+}
+
+.location img:hover {
+    transform: scale(1.7); /* Enlarge the image on hover */
+}
+
+@media screen and (min-width: 768px) and (max-width: 1208px) {
+    * {
+        /* Reset box-sizing and adjust default font size for mobile */
+        box-sizing: border-box;
+        font-size: 14px;
+      }
+    
+      .bannertop {
+        height: 40px;
+        padding: 0 0.25rem;
+      }
+    
+      .bannermascot img {
+        width: 3rem;
+        height: 3rem;
+      }
+  
+      .garybannertext a {
+        color: #e8f7fb;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: rgba(0, 0, 0, 0.7);
+        font-family: "Raleway", sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+    
+      .garybannertext {
+          font-size: 0.8rem;
+      }
+      .bannerbuttons {
+        margin-right: 2.5rem;
+      }
+    
+      .bannerbutton {
+        width: 6.625rem;
+        height: 2rem;
+      }
+    
+      .bannerbuttontext {
+        font-size: 0.875rem;
+      }
+      .bannerbottom {
+        height: 3rem;
+      }
+    
+      .bannerbottombutton {
+        width: 15rem;
+        height: 2rem;
+        padding-bottom: 1.8rem;
+      }
+    
+      .container {
+          display: flex;
+          align-items: center;
+          flex-direction:  column;
+          justify-content: center;
+        width: 100%;
+        height: auto;
+        margin-top: 8px;
+        padding: 8px;
+      }
+      
+    
+      #prev, #next {
+        font-size: 0.75rem;
+        padding: 8px;
+      }
+      .dot {
+          height: 6px;
+          width: 6px;
+      }
+    
+      .dots {
+        bottom: 2rem;
+        
+      }
+    
+      .foodImage img {
+        border-radius: 16px;
+      }
+    
+      .biocontainer {
+        margin-top: 1.5rem;
+      }
+    
+      .biocontainer2 {
+        width: 95%;
+        height: auto;
+        border-radius: 2.5rem;
+        padding: 1rem;
+      }
+    
+      #bio {
+        padding: 1.5rem;
+        font-size: 1rem;
+      }
+    
+      h2 {
+        font-size: 1.5rem;
+        padding-top: 0.5rem;
+      }
+    
+      .reviewPics {
+        width: 20rem;
+        height: auto;
+        padding: 0.5rem;
+      }
+    
+      .delMenuText {
+        font-size: 1.125rem;
+      }
+    
+      .delMenuButton1 {
+          display:flex;
+          align-content: center;
+          justify-content: center;
+        width: 16rem;
+        height: 2rem;
+      }
+    
+      .delMenuButtonText, .delMenuButton1 a {
+        font-size: 0.875rem;
+      }
+      .bottomContentLeft {
+          display: flex;
+          flex-direction:  column;
+          width: 45%;
+  
+      }
+      .satisfactionRating {
+        width:20rem;
+        height: auto;
+      }
+    
+      .newcontainer {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        padding: 10px;
+        border-radius: 2.1875rem;
+        margin-bottom: 1rem;
+  
+      }
+    
+      .newcontainer p, .newcontainer li, #contact {
+        font-size: 0.875rem;
+      }
+    
+      .location img {
+        height: 160px;
+        width: 230px;
+      }
+      .deliverMenuContainer {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: space-evenly;
+          height: 20rem;
+          flex-shrink: 0;
+          background: #023047;
+          width:24rem;
+      }
+      .address {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+      }
+      li {
+          width:24rem;
+      }
+    }
+    
+@media screen and (max-width: 767px) {
+    * {
+      /* Reset box-sizing and adjust default font size for mobile */
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+  
+    .bannertop {
+      height: 40px;
+      padding: 0 0.25rem;
+    }
+  
+    .bannermascot img {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .garybannertext {
+      font-size: 1.5rem;
+      margin-right: .3rem;
+      padding: 0.1rem;
+    }
+    
+    .garybannertext a {
+        color: #e8f7fb;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: rgba(0, 0, 0, 0.7);
+        font-family: "Raleway", sans-serif;
+        font-weight: 700;
+      }
+    .garybannertext {
+        font-size: 0.8rem;
+    }
+    .bannerbuttons {
+      margin-right: 2.5rem;
+    }
+  
+    .bannerbutton {
+      width: 6.625rem;
+      height: 2rem;
+    }
+  
+    .bannerbuttontext {
+      font-size: 0.875rem;
+    }
+    .bannerbottom {
+      height: 3rem;
+    }
+  
+    .bannerbottombutton {
+      width: 15rem;
+      height: 2rem;
+      padding-bottom: 1.8rem;
+    }
+  
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction:  column;
+        justify-content: center;
+      width: 100%;
+      height: auto;
+      margin-top: 8px;
+      padding: 8px;
+    }
+    
+  
+    #prev, #next {
+      font-size: 0.75rem;
+      padding: 8px;
+    }
+    .dot {
+        height: 6px;
+        width: 6px;
+    }
+  
+    .dots {
+      bottom: 2rem;
+      
+    }
+  
+    .foodImage img {
+      border-radius: 16px;
+    }
+  
+    .biocontainer {
+      margin-top: 1.5rem;
+    }
+  
+    .biocontainer2 {
+      width: 95%;
+      height: auto;
+      border-radius: 2.5rem;
+      padding: 1rem;
+    }
+  
+    #bio {
+      padding: 1.5rem;
+      font-size: 1rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+      padding-top: 0.5rem;
+    }
+  
+    .reviewPics {
+      width: 20rem;
+      height: auto;
+      padding: 0.5rem;
+    }
+  
+    .delMenuText {
+      font-size: 1.125rem;
+    }
+  
+    .delMenuButton1 {
+        display:flex;
+        align-content: center;
+        justify-content: center;
+      width: 16rem;
+      height: 2rem;
+    }
+  
+    .delMenuButtonText, .delMenuButton1 a {
+      font-size: 0.875rem;
+    }
+    .bottomContentLeft {
+        display: flex;
+        flex-direction:  column;
+        width: 45%;
+
+    }
+    .satisfactionRating {
+      width:20rem;
+      height: auto;
+    }
+  
+    .newcontainer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      padding: 10px;
+      border-radius: 2.1875rem;
+      margin-bottom: 1rem;
+
+    }
+  
+    .newcontainer p, .newcontainer li, #contact {
+      font-size: 0.875rem;
+    }
+  
+    .location img {
+      height: 160px;
+      width: 230px;
+    }
+    .deliverMenuContainer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 20rem;
+        flex-shrink: 0;
+        background: #023047;
+        width:24rem;
+    }
+    .address {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    li {
+        width:24rem;
+    }
+  }
+  
