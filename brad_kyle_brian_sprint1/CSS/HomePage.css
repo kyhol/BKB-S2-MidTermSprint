@@ -8,7 +8,9 @@ Date finished: 2024-06-21? */
   padding: 0;
   box-sizing: border-box;
 }
-
+body{
+ width: 100%;
+}
 .bannertop {
   position: static;
   width: 100%;
