@@ -2,13 +2,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 3%;
-    padding-right: 3%;
     margin-bottom: 50px;
 }
 
 #column1, #column2 {
-    width: 47%;
+    width: 49%;
     display: flex;
     flex-direction: column;
     border: #6F7DFB 1px solid;
@@ -42,10 +40,9 @@
     outline: none;
     border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 10px;
-    padding-right: 31px;
     font-size: 16px;
     margin-bottom: 20px;
-    width: 90%;
+    width: 100%;
   }
 
 #cardvalid{
@@ -171,5 +168,5 @@
 #pment {
   background-color: #E8F7FB;
   padding: 5px;
-  width: 90%;
+  width: 100%;
 }
