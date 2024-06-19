@@ -224,6 +224,18 @@ function addressAutocomplete(containerElement, callback, options) {
     placeholder: "Address:"
   });
 
+function orderAlert(msg, gfg) {
+    var confirmBox = document.getElementById("orderContainer");
+    
+    confirmBox.querySelector("#message").textContent = msg;
+    
+    confirmBox.querySelector("#closeButton").onclick = function() {
+        confirmBox.style.display = 'none';
+    };
+    
+    confirmBox.style.display = 'flex';
+}
+
   document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("form");
     const nameInput = document.getElementById("name");
@@ -236,7 +248,7 @@ function addressAutocomplete(containerElement, callback, options) {
     const laterRadio = document.getElementById("later");
     const orderTimeInput = document.getElementById("ordertime");
 
-    form.addEventListener("submit", function(event) {
+    document.getElementById("feedMe").addEventListener("click", function(event) {
         event.preventDefault();
         let valid = true;
 
@@ -287,7 +299,8 @@ function addressAutocomplete(containerElement, callback, options) {
         }
 
         if (valid) {
-            alert("Form submitted successfully!");
+            orderAlert("Thank you for your order!\nHang tight, Gary is getting your goodies\nready to GO!", function() {
+        console.log("Alert confirmed");
         }
     });
 });
