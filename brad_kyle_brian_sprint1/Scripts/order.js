@@ -81,7 +81,7 @@ function addressAutocomplete(containerElement, callback, options) {
   
           // The API Key provided is restricted to JSFiddle website
           // Get your own API Key on https://myprojects.geoapify.com
-          const apiKey = "fff87b89a15240a6ba2340cde5306e78";
+          const apiKey = "Your Api";
   
           var url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${encodeURIComponent(currentValue)}&format=json&limit=5&apiKey=${apiKey}`;
   
