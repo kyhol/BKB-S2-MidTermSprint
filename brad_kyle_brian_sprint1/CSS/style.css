@@ -2,12 +2,12 @@
   background-color: #f9f9f9;
   max-width: 100dvw;
   width: calc(100% - 18rem);
-  margin: 16px;
   margin-inline: auto;
   min-height: 100dvh;
   height: 100%;
   padding: 16px;
   position: relative;
+  margin-bottom: 64px;
 }
 
 footer {
