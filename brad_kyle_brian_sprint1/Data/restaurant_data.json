@@ -1,0 +1,52 @@
+{
+    "restaurant": {
+      "name": "Gary Blue's Diner",
+      "address": {
+        "street": "123 Duckworth Street",
+        "city": "St. John's",
+        "province": "Newfoundland and Labrador",
+        "country": "Canada",
+        "postal_code": "A1C 1H6"
+      },
+      "contact": {
+        "phone": "+1 (709) 555-5555"
+      },
+      "description":{
+        "storefront": "Located on the beautiful beachfront, Gary Blue's Diner offers more than just delicious food; it's a culinary adventure by the sea. With a menu as imaginative as its owner, Gary Blue, diners can indulge in towering burgers and decadent desserts. But beyond the food, it's the warm welcome and the twinkle in Gary's eye that make this diner a must-visit. It's not just a place to eat; it's a dining experience fit for foodies and beach lovers alike."
+      },
+      "hours_of_operation": {
+        "Sunday": {
+          "open": "Closed",
+          "close": "Closed"
+        },
+        "Monday": {
+          "open": ["11:30 AM", "05:00 PM"],
+          "close": ["02:00 PM", "08:00 PM"]
+        },
+        "Tuesday": {
+          "open": ["11:30 AM", "05:00 PM"],
+          "close": ["02:00 PM", "08:00 PM"]
+        },
+        "Wednesday": {
+          "open": ["11:30 AM", "05:00 PM"],
+          "close": ["02:00 PM", "08:00 PM"]
+        },
+        "Thursday": {
+          "open": ["11:30 AM", "05:00 PM"],
+          "close": ["02:00 PM", "09:00 PM"]
+        },
+        "Friday": {
+          "open": ["11:30 AM", "05:00 PM"],
+          "close": ["02:00 PM", "09:00 PM"]
+        },
+        "Saturday": {
+          "open": ["11:30 AM", "05:00 PM"],
+          "close": ["02:00 PM", "09:00 PM"]
+        }
+      },
+      "details": {
+        "type": "Casual",
+        "services": ["Takeout", "Wheelchair Accessible", "Reservations", "Waiter Service", "Group Friendly", "Alcohol"]
+      }
+    }
+  }
