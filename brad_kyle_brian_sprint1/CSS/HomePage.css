@@ -40,7 +40,6 @@ body{
   font-size: 3rem;
   font-weight: 700;
   margin-right: 20rem;
-
 }
 
 .bannerbuttons {
@@ -98,8 +97,8 @@ body{
   background-color: #a34a0f;
 }
 .container {
-    width: 85.125rem;
-    height: 50.6875rem;
+  width: 85.125rem;
+  height: 50.6875rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,7 +193,7 @@ body{
 }
 
 svg {
-    width: 100%;
+  width: 100%;
 }
 
 .biocontainer {
@@ -241,55 +240,56 @@ h2 {
 }
 
 #gblue {
-    color: #057ADA;
-    font-family: 'Poppins';
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-    padding-top: 1rem;
-    opacity: 0.9;
+  color: #057ada;
+  font-family: "Poppins";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  padding-top: 1rem;
+  opacity: 0.9;
 }
 
 .reviewPics {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 1rem;
-    width: 31.75rem;
-    height: 12.4375rem;
-    flex-shrink: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  width: 31.75rem;
+  height: 12.4375rem;
+  flex-shrink: 0;
 }
 .slider-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column; /* This ensures the satisfaction rating is above the images */
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* This ensures the satisfaction rating is above the images */
 }
 
 .slider-container .fa-caret-left,
 .slider-container .fa-caret-right {
-    display: flex;
-    color: #000;
-    background-color: #da722c;
-    cursor: pointer;
-    user-select: none;
-    
+  display: flex;
+  color: #000;
+  background-color: #da722c;
+  cursor: pointer;
+  user-select: none;
 }
 
-#prevReview1, #nextReview1 {
-    display: flex;
-    color: white;
-    cursor: pointer;
-    padding:0.6rem;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: 0.6s ease;
-    user-select: none;
-    border-radius: 50%;
+#prevReview1,
+#nextReview1 {
+  display: flex;
+  color: white;
+  cursor: pointer;
+  padding: 0.6rem;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.6s ease;
+  user-select: none;
+  border-radius: 50%;
 }
 
-#prevReview1:hover, #nextReview1:hover {
-    background-color: #a34a0f;
+#prevReview1:hover,
+#nextReview1:hover {
+  background-color: #a34a0f;
 }
 .deliverMenuContainer {
     display: flex;
@@ -302,86 +302,83 @@ h2 {
     border-radius: 5.375rem;
     background: #023047;
 }
-
 .delMenuText{
     color: #FFF;
     font-family: 'Poppins';
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
 }
 .delMenuButton1 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    width: 20rem;
-    height: 3rem;
-    opacity: 0.95;
-    border-radius: 1.5rem;
-    background: #da722c;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 20rem;
+  height: 3rem;
+  opacity: 0.95;
+  border-radius: 1.5rem;
+  background: #da722c;
 }
 
-
-.delMenuButtonText{
-    color: #FFF;
-    font-family: 'Poppins';
-    font-size: 1.125rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+.delMenuButtonText {
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .delMenuButton1 a {
-    color: #FFF;
-    font-family: 'Poppins';
-    font-size: 1.125rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 .delMenuButton1:hover {
-    background: #f4a261; 
+  background: #f4a261;
 }
 
 .satisfactionRating {
-    display:flex;
-    text-align: center;
-    align-items: center;
-    width: 26.6875rem;
-    height: 7.1875rem;
-    flex-shrink: 0;
-    border-radius: 1.4375rem;
-    background: rgba(5, 122, 218, 0.80);
-    }
-    .bottomContentLeft {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-    }
-    .bottomContentRight {
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: 26.6875rem;
+  height: 7.1875rem;
+  flex-shrink: 0;
+  border-radius: 1.4375rem;
+  background: rgba(5, 122, 218, 0.8);
+}
+.bottomContentLeft {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.bottomContentRight {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    .slider-wrapper {
-        display: flex;
-        align-items: center;
-        position: relative;
-    }
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
 .garybannertext a {
   color: #e8f7fb;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(0, 0, 0, 0.7);
   text-decoration: none;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .garybannertext a:hover {
-  color: #6F7DFB;
+  color: #6f7dfb;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgba(0, 0, 0, 0.7);
   text-decoration: wavy;

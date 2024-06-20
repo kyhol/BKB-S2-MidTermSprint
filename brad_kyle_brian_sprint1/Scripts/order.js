@@ -81,7 +81,7 @@ function addressAutocomplete(containerElement, callback, options) {
   
           // The API Key provided is restricted to JSFiddle website
           // Get your own API Key on https://myprojects.geoapify.com
-          const apiKey = "6dc7fb95a3b246cfa0f3bcef5ce9ed9a";
+          const apiKey = "fff87b89a15240a6ba2340cde5306e78";
   
           var url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${encodeURIComponent(currentValue)}&format=json&limit=5&apiKey=${apiKey}`;
   
@@ -224,6 +224,18 @@ function addressAutocomplete(containerElement, callback, options) {
     placeholder: "Address:"
   });
 
+function orderAlert(msg, gfg) {
+    var confirmBox = document.getElementById("orderContainer");
+    
+    confirmBox.querySelector("#message").textContent = msg;
+    
+    confirmBox.querySelector("#closeButton").onclick = function() {
+        confirmBox.style.display = 'none';
+    };
+    
+    confirmBox.style.display = 'flex';
+}
+
   document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("form");
     const nameInput = document.getElementById("name");
@@ -236,7 +248,7 @@ function addressAutocomplete(containerElement, callback, options) {
     const laterRadio = document.getElementById("later");
     const orderTimeInput = document.getElementById("ordertime");
 
-    form.addEventListener("submit", function(event) {
+    document.getElementById("feedMe").addEventListener("click", function(event) {
         event.preventDefault();
         let valid = true;
 
@@ -278,16 +290,18 @@ function addressAutocomplete(containerElement, callback, options) {
             alert("Expiry date cannot be in the past.");
         }
 
-        if (laterRadio.checked) {
+          if (laterRadio.checked) {
             const orderTime = new Date(orderTimeInput.value);
             if (orderTime < today) {
-                valid = false;
-                alert("Order time cannot be in the past.");
+              valid = false;
+              alert("Order time cannot be in the past.");
             }
-        }
+          }
 
-        if (valid) {
-            alert("Form submitted successfully!");
-        }
-    });
-});
+          if (valid) {
+            orderAlert("Thank you for your order!\nHang tight, Gary is getting your goodies\nready to GO!", function() {
+              console.log("Alert confirmed");
+            });
+          }
+          });
+        });
