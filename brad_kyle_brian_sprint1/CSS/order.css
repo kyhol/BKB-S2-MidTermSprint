@@ -110,12 +110,13 @@
   }
 
 #orderinnerhtml {
-    height: 300px;
+    height: 250px;
     overflow-y: scroll;
     background-color: #fff;
     margin-bottom: 12px;
     text-align: right;
     word-spacing: fill;
+    border: #6F7DFB 1px solid;
 }
 
 #orderinnerhtml p {
