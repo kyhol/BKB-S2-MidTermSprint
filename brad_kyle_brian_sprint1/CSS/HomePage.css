@@ -3,11 +3,7 @@ Name(s): Kyle Hollett Brian Janes Brad Avery
 Date Created: 2024-06-17
 Date finished: 2024-06-21? */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* HEADER CSS */
 .bannertop {
   position: static;
   width: 100%;
@@ -93,10 +89,12 @@ Date finished: 2024-06-21? */
 .bannerbutton:hover {
   background-color: #a34a0f;
 }
+
+/* MAIN LAYOUT CONTAINER */
 .container {
-  width: 100%;
-  height: 50.6875rem;
+  width: 85.125rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-inline: auto;
@@ -107,9 +105,17 @@ Date finished: 2024-06-21? */
   position: relative;
 }
 
+/* CAROUSEL CSS */
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
 #prev {
   position: absolute;
-
   color: white;
   cursor: pointer;
   padding: 16px;
@@ -193,11 +199,10 @@ svg {
   width: 100%;
 }
 
-.biocontainer {  
-    display: flex;
-    justify-content: center;
-    align-content: center;
-  max-width: 100dvw;
+.biocontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   flex-direction: column;
   background-color: #f9f9f9;
@@ -205,8 +210,6 @@ svg {
 }
 
 .biocontainer2 {
-  width: 100%;
-  height: 41.0625rem;
   border-radius: 5.375rem;
   background: #023047;
   padding-top: 1.75rem;
@@ -224,7 +227,6 @@ svg {
 }
 
 h2 {
-
   color: #da722c;
   text-align: center;
   font-family: "Raleway";
@@ -289,22 +291,22 @@ h2 {
   background-color: #a34a0f;
 }
 .deliverMenuContainer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 37.625rem;
-    height: 35.3125rem;
-    flex-shrink: 0;
-    border-radius: 5.375rem;
-    background: #023047;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 37.625rem;
+  height: 35.3125rem;
+  flex-shrink: 0;
+  border-radius: 5.375rem;
+  background: #023047;
 }
-.delMenuText{
-    color: #FFF;
-    font-family: 'Poppins';
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 700;
+.delMenuText {
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
 }
 .delMenuButton1 {
   display: flex;
@@ -351,8 +353,10 @@ h2 {
 }
 .bottomContentLeft {
   display: flex;
-  flex-direction: column;
-  width: 50%;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 64px 32px;
 }
 .bottomContentRight {
   width: 50%;
@@ -382,456 +386,425 @@ h2 {
 }
 
 .newcontainer {
-    display:flex;
-    justify-content: space-evenly;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 67px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    color: #555;
-    background-color: #023047;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 67px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  color: #555;
+  background-color: #023047;
 }
 
 .newcontainer p {
-    font-size: 1em;
-    color: #555;
-    margin: 5px 0;
+  font-size: 1em;
+  color: #555;
+  margin: 5px 0;
 }
 
 .newcontainer ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .newcontainer li {
-    background-color:#023047;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 5px;
-    font-size: 1em;
-    color:#e8f7fb;
-    font-family: 'Poppins';
+  background-color: #023047;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 5px;
+  font-size: 1em;
+  color: #e8f7fb;
+  font-family: "Poppins";
 }
 
 #address {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    font-family: 'Poppins';
-    font-weight: bold;
-
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: "Poppins";
+  font-weight: bold;
 }
 
 #contact {
-    text-align: center;
-    color: #555;
-    font-family: 'Poppins';
-    font-weight: bold;
-    padding: 10px;
+  text-align: center;
+  color: #555;
+  font-family: "Poppins";
+  font-weight: bold;
+  padding: 10px;
 }
 .address #address,
 .address #contact {
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-    color:#e8f7fb;
-    font-family: 'Poppins';
-    padding: 10px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  color: #e8f7fb;
+  font-family: "Poppins";
+  padding: 10px;
 }
 
 .hours ul {
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
 }
 
 .hours li {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 .details ul {
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
 }
 
 .details li {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 .location {
-    display: flex;
-    justify-content: center;
-    
+  display: flex;
+  justify-content: center;
 }
 
 .location img {
-    border-radius: 23px;
-    height: 253px; 
-    width: 364px;
-    transition: transform 0.3s; /* Add a transition for a smooth effect */
+  border-radius: 23px;
+  height: 253px;
+  width: 364px;
+  transition: transform 0.3s; /* Add a transition for a smooth effect */
 }
 
 .location img:hover {
-    transform: scale(1.7); /* Enlarge the image on hover */
+  transform: scale(1.7); /* Enlarge the image on hover */
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    * {
-        /* Reset box-sizing and adjust default font size for mobile */
-        box-sizing: border-box;
-        font-size: 14px;
-      }
-    
-      .bannertop {
-        height: 40px;
-        padding: 0 0.25rem;
-      }
-    
-      .bannermascot img {
-        width: 3rem;
-        height: 3rem;
-      }
-  
-      .garybannertext a {
-        color: #e8f7fb;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: rgba(0, 0, 0, 0.7);
-        font-family: "Raleway", sans-serif;
-        font-size: 2rem;
-        font-weight: 700;
-      }
-    
-      .garybannertext {
-          font-size: 0.8rem;
-      }
-      .bannerbuttons {
-        margin-right: 2.5rem;
-      }
-    
-      .bannerbutton {
-        width: 6.625rem;
-        height: 2rem;
-      }
-    
-      .bannerbuttontext {
-        font-size: 0.875rem;
-      }
-      .bannerbottom {
-        height: 3rem;
-      }
-    
-      .bannerbottombutton {
-        width: 15rem;
-        height: 2rem;
-        padding-bottom: 1.8rem;
-      }
-    
-      .container {
-          display: flex;
-          align-items: center;
-          flex-direction:  column;
-          justify-content: center;
-        width: 100%;
-        height: auto;
-        margin-top: 8px;
-        padding: 8px;
-      }
-      
-    
-      #prev, #next {
-        font-size: 0.75rem;
-        padding: 8px;
-      }
-      .dot {
-          height: 6px;
-          width: 6px;
-      }
-    
-      .dots {
-        bottom: 2rem;
-        
-      }
-    
-      .foodImage img {
-        border-radius: 16px;
-      }
-    
-      .biocontainer {
-        margin-top: 1.5rem;
-      }
-    
-      .biocontainer2 {
-        width: 95%;
-        height: auto;
-        border-radius: 2.5rem;
-        padding: 1rem;
-      }
-    
-      #bio {
-        padding: 1.5rem;
-        font-size: 1rem;
-      }
-    
-      h2 {
-        font-size: 1.5rem;
-        padding-top: 0.5rem;
-      }
-    
-      .reviewPics {
-        width: 20rem;
-        height: auto;
-        padding: 0.5rem;
-      }
-    
-      .delMenuText {
-        font-size: 1.125rem;
-      }
-    
-      .delMenuButton1 {
-          display:flex;
-          align-content: center;
-          justify-content: center;
-        width: 16rem;
-        height: 2rem;
-      }
-    
-      .delMenuButtonText, .delMenuButton1 a {
-        font-size: 0.875rem;
-      }
-      .bottomContentLeft {
-          display: flex;
-          flex-direction:  column;
-          width: 45%;
-  
-      }
-      .satisfactionRating {
-        width:20rem;
-        height: auto;
-      }
-    
-      .newcontainer {
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-        padding: 10px;
-        border-radius: 2.1875rem;
-        margin-bottom: 1rem;
-  
-      }
-    
-      .newcontainer p, .newcontainer li, #contact {
-        font-size: 0.875rem;
-      }
-    
-      .location img {
-        height: 160px;
-        width: 230px;
-      }
-      .deliverMenuContainer {
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-          justify-content: space-evenly;
-          height: 20rem;
-          flex-shrink: 0;
-          background: #023047;
-          width:24rem;
-      }
-      .address {
-          display: flex;
-          align-items: center;
-          flex-direction: column;
-      }
-      li {
-          width:24rem;
-      }
-      #gblue {
-            font-size:1.5rem;
-
-      }
-    }
-    
-@media screen and (max-width: 767px) {
-    * {
-      /* Reset box-sizing and adjust default font size for mobile */
-      box-sizing: border-box;
-      font-size: 14px;
-    }
-    
-    #gblue{
-        font-size: 1.5
-    }
-
-    .bannertop {
-      height: 40px;
-      padding: 0 0.25rem;
-    }
-  
-    .bannermascot img {
-      width: 3rem;
-      height: 3rem;
-    }
-
-    .garybannertext {
-      font-size: 1.5rem;
-      margin-right: .3rem;
-      padding: 0.1rem;
-    }
-    
-    .garybannertext a {
-        color: #e8f7fb;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: rgba(0, 0, 0, 0.7);
-        font-family: "Raleway", sans-serif;
-        font-weight: 700;
-      }
-    .garybannertext {
-        font-size: 0.8rem;
-    }
-    .bannerbuttons {
-      margin-right: 2.5rem;
-    }
-  
-    .bannerbutton {
-      width: 6.625rem;
-      height: 2rem;
-    }
-  
-    .bannerbuttontext {
-      font-size: 0.875rem;
-    }
-    .bannerbottom {
-      height: 3rem;
-    }
-  
-    .bannerbottombutton {
-      width: 15rem;
-      height: 2rem;
-      padding-bottom: 1.8rem;
-    }
-  
-    .container {
-        display: flex;
-        align-items: center;
-        flex-direction:  column;
-        justify-content: center;
-      width: 100%;
-      height: auto;
-      margin-top: 8px;
-      padding: 8px;
-    }
-    
-  
-    #prev, #next {
-      font-size: 0.75rem;
-      padding: 8px;
-    }
-    .dot {
-        height: 6px;
-        width: 6px;
-    }
-  
-    .dots {
-      bottom: 2rem;
-      
-    }
-  
-    .foodImage img {
-      border-radius: 16px;
-    }
-  
-    .biocontainer {
-      margin-top: 1.5rem;
-    }
-  
-    .biocontainer2 {
-      width: 95%;
-      height: auto;
-      border-radius: 2.5rem;
-      padding: 1rem;
-    }
-  
-    #bio {
-      padding: 1.5rem;
-      font-size: 1rem;
-    }
-  
-    h2 {
-      font-size: 1.5rem;
-      padding-top: 0.5rem;
-    }
-  
-    .reviewPics {
-      width: 20rem;
-      height: auto;
-      padding: 0.5rem;
-    }
-  
-    .delMenuText {
-      font-size: 1.125rem;
-    }
-  
-    .delMenuButton1 {
-        display:flex;
-        align-content: center;
-        justify-content: center;
-      width: 16rem;
-      height: 2rem;
-    }
-  
-    .delMenuButtonText, .delMenuButton1 a {
-      font-size: 0.875rem;
-    }
-    .bottomContentLeft {
-        display: flex;
-        flex-direction:  column;
-        width: 45%;
-
-    }
-    .satisfactionRating {
-      width:20rem;
-      height: auto;
-    }
-  
-    .newcontainer {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-      padding: 10px;
-      border-radius: 2.1875rem;
-      margin-bottom: 1rem;
-
-    }
-  
-    .newcontainer p, .newcontainer li, #contact {
-      font-size: 0.875rem;
-    }
-  
-    .location img {
-      height: 160px;
-      width: 230px;
-    }
-    .deliverMenuContainer {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 20rem;
-        flex-shrink: 0;
-        background: #023047;
-        width:24rem;
-    }
-    .address {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    li {
-        width:24rem;
-    }
+  * {
+    /* Reset box-sizing and adjust default font size for mobile */
+    box-sizing: border-box;
+    font-size: 14px;
   }
-/*   
-  @media screen and (min-width: 1025px) and (max-width: 1370px) { maybe
 
-  } */
+  .bannertop {
+    height: 40px;
+    padding: 0 0.25rem;
+  }
+
+  .bannermascot img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .garybannertext a {
+    color: #e8f7fb;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.7);
+    font-family: "Raleway", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .garybannertext {
+    font-size: 0.8rem;
+  }
+  .bannerbuttons {
+    margin-right: 2.5rem;
+  }
+
+  .bannerbutton {
+    width: 6.625rem;
+    height: 2rem;
+  }
+
+  .bannerbuttontext {
+    font-size: 0.875rem;
+  }
+  .bannerbottom {
+    height: 3rem;
+  }
+
+  .bannerbottombutton {
+    width: 15rem;
+    height: 2rem;
+    padding-bottom: 1.8rem;
+  }
+
+  #prev,
+  #next {
+    font-size: 0.75rem;
+    padding: 8px;
+  }
+  .dot {
+    height: 6px;
+    width: 6px;
+  }
+
+  .dots {
+    bottom: 2rem;
+  }
+
+  .foodImage img {
+    border-radius: 16px;
+  }
+
+  .biocontainer {
+    margin-top: 1.5rem;
+  }
+
+  .biocontainer2 {
+    width: 95%;
+    height: auto;
+    border-radius: 2.5rem;
+    padding: 1rem;
+  }
+
+  #bio {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .reviewPics {
+    width: 20rem;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .delMenuText {
+    font-size: 1.125rem;
+  }
+
+  .delMenuButton1 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 16rem;
+    height: 2rem;
+  }
+
+  .delMenuButtonText,
+  .delMenuButton1 a {
+    font-size: 0.875rem;
+  }
+  .satisfactionRating {
+    width: 20rem;
+    height: auto;
+  }
+
+  .newcontainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 2.1875rem;
+    margin-bottom: 1rem;
+  }
+
+  .newcontainer p,
+  .newcontainer li,
+  #contact {
+    font-size: 0.875rem;
+  }
+
+  .location img {
+    height: 160px;
+    width: 230px;
+  }
+  .deliverMenuContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 20rem;
+    flex-shrink: 0;
+    background: #023047;
+    width: 24rem;
+  }
+  .address {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  li {
+    width: 24rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  * {
+    /* Reset box-sizing and adjust default font size for mobile */
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  .bannertop {
+    height: 40px;
+    padding: 0 0.25rem;
+  }
+
+  .bannermascot img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .garybannertext {
+    font-size: 1.5rem;
+    margin-right: 0.3rem;
+    padding: 0.1rem;
+  }
+
+  .garybannertext a {
+    color: #e8f7fb;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.7);
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+  }
+  .garybannertext {
+    font-size: 0.8rem;
+  }
+  .bannerbuttons {
+    margin-right: 2.5rem;
+  }
+
+  .bannerbutton {
+    width: 6.625rem;
+    height: 2rem;
+  }
+
+  .bannerbuttontext {
+    font-size: 0.875rem;
+  }
+  .bannerbottom {
+    height: 3rem;
+  }
+
+  .bannerbottombutton {
+    width: 15rem;
+    height: 2rem;
+    padding-bottom: 1.8rem;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 8px;
+    padding: 8px;
+  }
+
+  #prev,
+  #next {
+    font-size: 0.75rem;
+    padding: 8px;
+  }
+  .dot {
+    height: 6px;
+    width: 6px;
+  }
+
+  .dots {
+    bottom: 2rem;
+  }
+
+  .foodImage img {
+    border-radius: 16px;
+  }
+
+  .biocontainer {
+    margin-top: 1.5rem;
+  }
+
+  .biocontainer2 {
+    width: 95%;
+    height: auto;
+    border-radius: 2.5rem;
+    padding: 1rem;
+  }
+
+  #bio {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .reviewPics {
+    width: 20rem;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .delMenuText {
+    font-size: 1.125rem;
+  }
+
+  .delMenuButton1 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 16rem;
+    height: 2rem;
+  }
+
+  .delMenuButtonText,
+  .delMenuButton1 a {
+    font-size: 0.875rem;
+  }
+
+  .satisfactionRating {
+    width: 20rem;
+    height: auto;
+  }
+
+  .newcontainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 2.1875rem;
+    margin-bottom: 1rem;
+  }
+
+  .newcontainer p,
+  .newcontainer li,
+  #contact {
+    font-size: 0.875rem;
+  }
+
+  .location img {
+    height: 160px;
+    width: 230px;
+  }
+  .deliverMenuContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 20rem;
+    flex-shrink: 0;
+    background: #023047;
+    width: 24rem;
+  }
+  .address {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  li {
+    width: 24rem;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1370px) {
+}
