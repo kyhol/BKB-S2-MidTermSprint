@@ -110,18 +110,20 @@
   }
 
 #orderinnerhtml {
-    height: 300px;
+    height: 250px;
     overflow-y: scroll;
     background-color: #fff;
     margin-bottom: 12px;
     text-align: right;
-    word-spacing: 10%;
+    word-spacing: fill;
+    border: #6F7DFB 1px solid;
 }
 
 #orderinnerhtml p {
     width: 100%;
     margin: 10px 0;
     padding-right: 5px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .input-container {
