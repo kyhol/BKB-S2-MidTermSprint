@@ -305,3 +305,25 @@ function orderAlert(msg, gfg) {
           }
           });
         });
+
+        window.onload = function() {
+          const data = localStorage.getItem('cart');
+          const orderInnerHtml = document.getElementById('orderinnerhtml');
+      
+          if (data) {
+              const cartItems = JSON.parse(data);
+              let subTotal = 0;
+              for (let i = 0; i < cartItems.length; i++) {
+                  let item = cartItems[i]['name']
+                  let price = cartItems[i]['price']
+                  let quantity = cartItems[i]['quantity']
+                  let itemTotal = price * quantity
+                  subTotal += itemTotal
+                  orderInnerHtml.innerHTML += '<p>' + item + ' -- ' + price + ' x ' + quantity + ' = ' + itemTotal + '</p>';
+              }
+              orderInnerHtml.innerHTML += '<hr><p>Subtotal: $' + subTotal + '</p><p>Tax: $' + (subTotal * 0.15).toFixed(2) + '</p><p>Total: $' + (subTotal * 1.15).toFixed(2) + '</p>';
+          } else {
+              orderInnerHtml.innerHTML = "Why don't you treat yourself to one of Gary's special treats?"
+          }
+      };
+      
