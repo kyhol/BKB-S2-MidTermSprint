@@ -106,7 +106,8 @@
     width: 30%;
     height: 50px;
     border-radius: 25px;
-    font-size: larger;
+    font-size:large;
+    min-width: 88px;
   }
 
 #orderinnerhtml {
@@ -321,4 +322,21 @@
   -webkit-text-stroke-color: rgba(0, 0, 0, 0.7);
   text-decoration: none;
   font-family: "Raleway", sans-serif;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet View */
+@media (max-width: 768px) {
+  #feedMe {
+    font-size: medium;
+  }
+}
+
+/* Smartphone View */
+@media (max-width: 480px) {
+  #columns {
+    flex-direction: column;
+    font-size: small;
+  }
 }

@@ -34,6 +34,7 @@ footer {
 
 #filler {
   width: 10%;
+  height: auto;
 }
 #copyright {
   display: flex;
@@ -142,10 +143,9 @@ body {
     font-size: smaller;
   }
 
-  #footerlogo {
-    width: 40px;
-    margin: 8px;
-  }
+#socials img {
+  transform: scale(0.8);
+}
 
   #socials {
     width: 50%;
@@ -163,15 +163,18 @@ body {
   }
 
   footer {
-    font-size: x-small;
+    font-size: smaller;
+    flex-direction: column;
+    height: 120px;
+    justify-content: space-evenly;
   }
 
-  #footerlogo {
-    width: 30px;
-    margin: 10px;
+  #socials, #copyright {
+    width: 100%;
+    justify-content: space-between;
   }
 
-  #socials {
-    width: 66%;
+  #socials img {
+    transform: scale(0.8);
   }
 }
