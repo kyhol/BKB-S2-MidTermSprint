@@ -133,6 +133,19 @@ body {
     margin-inline: 0;
     padding: 8px;
   }
+
+  footer {
+    font-size: smaller;
+  }
+
+  #footerlogo {
+    width: 40px;
+    margin: 8px;
+  }
+
+  #socials {
+    width: 50%;
+  }
 }
 
 /* Smartphone View */
@@ -143,5 +156,18 @@ body {
     margin: 0;
     margin-inline: 0;
     padding: 0;
+  }
+
+  footer {
+    font-size: x-small;
+  }
+
+  #footerlogo {
+    width: 30px;
+    margin: 10px;
+  }
+
+  #socials {
+    width: 66%;
   }
 }
