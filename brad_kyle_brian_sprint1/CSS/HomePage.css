@@ -84,10 +84,14 @@ Date finished: 2024-06-21? */
   background: #da722c;
 }
 .bannerbottombutton:hover {
-  background-color: #a34a0f;
+    background-color:#bd5f12;
+    letter-spacing: 0.1rem;
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.5);
 }
 .bannerbutton:hover {
-  background-color: #a34a0f;
+    background-color:#bd5f12;
+  letter-spacing: 0.1rem;
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.5);
 }
 
 /* MAIN LAYOUT CONTAINER */
@@ -182,6 +186,24 @@ Date finished: 2024-06-21? */
     opacity: 1;
   }
 }
+.letter {
+    display: inline-block;
+    transition: color 0.5s ease;
+}
+
+/* Keyframes for color change */
+@keyframes colorChange {
+    0% { color:#f4a261; }
+    25% { color:#e8f7fb; }
+    50% { color:#f4a261; }
+    75% { color:#e8f7fb;  }
+    100% { color: #f4a261; }
+}
+
+.letter.animate {
+    animation: colorChange 5s infinite;
+}
+
 
 .foodImage {
   display: flex;
@@ -343,6 +365,7 @@ h2 {
 
 .satisfactionRating {
   display: flex;
+  justify-content: center;
   text-align: center;
   align-items: center;
   width: 26.6875rem;
@@ -632,6 +655,15 @@ h2 {
   li {
     width: 24rem;
   }
+
+  .bottomContentLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 64px 32px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -804,7 +836,13 @@ h2 {
   li {
     width: 24rem;
   }
-}
 
-@media screen and (min-width: 1025px) and (max-width: 1370px) {
+  .bottomContentLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 64px 32px;
+    flex-direction: column;
+  }
 }

@@ -128,3 +128,12 @@ document.addEventListener('DOMContentLoaded', function () {
 //         // Your existing code for displaying the JSON data
 //     })
 //     .catch(error => console.error('Error fetching data:', error)); // Log any errors that occur during the fetch
+
+document.addEventListener('DOMContentLoaded', () => {
+    const letters = document.querySelectorAll('.letter');
+    letters.forEach((letter, index) => {
+        setTimeout(() => {
+            letter.classList.add('animate');
+        }, index * 200); // Delay each letter by 100ms
+    });
+});
