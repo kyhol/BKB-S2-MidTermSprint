@@ -184,6 +184,31 @@
   display: block;
 }
 
+/* =============================================== */
+/* CSS FOR POPUP */
+/* =============================================== */
+.cart-popup {
+  display: none;
+  position: fixed;
+  bottom: 50%;
+  left: 40%;
+  background-color: #4caf50;
+  color: white;
+  padding: 16px;
+  border-radius: 4px;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* Show the popup */
+.cart-popup.show {
+  display: block;
+  opacity: 1;
+}
+
+/* =============================================== */
 /* MEDIA QUERIES */
 /* I chose these breakpoints based on a recommendation from chatGPT to cover generalized points for phones and tablets differently in most instances. */
 /* =============================================== */

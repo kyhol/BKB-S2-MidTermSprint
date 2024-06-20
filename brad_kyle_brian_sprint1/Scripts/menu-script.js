@@ -125,8 +125,8 @@ window.addEventListener("DOMContentLoaded", function () {
         // Store updated cart back into localStorage
         localStorage.setItem("cart", JSON.stringify(cart));
 
-        // Optionally, update UI to reflect cart changes (e.g., show a notification)
-        console.log(`${name} added to cart!`);
+        // Show notification popup
+        showPopup(`${name} added to cart!`);
       }
 
       // Event delegation to handle "Add to Cart" button clicks
@@ -140,6 +140,18 @@ window.addEventListener("DOMContentLoaded", function () {
           addToCart(itemName, price, type);
         }
       });
+
+      // Function to show popup notification
+      function showPopup(message) {
+        const popup = document.getElementById("cart-notification");
+        popup.textContent = message; // Update the popup message
+        popup.classList.add("show"); // Add the show class to make it visible
+
+        // Hide the popup after 3 seconds
+        setTimeout(() => {
+          popup.classList.remove("show");
+        }, 3000);
+      }
     })
     .catch((error) => {
       console.error("Error fetching menu:", error);
