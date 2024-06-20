@@ -646,6 +646,10 @@ h2 {
       li {
           width:24rem;
       }
+      #gblue {
+            font-size:1.5rem;
+
+      }
     }
     
 @media screen and (max-width: 767px) {
@@ -654,7 +658,11 @@ h2 {
       box-sizing: border-box;
       font-size: 14px;
     }
-  
+    
+    #gblue{
+        font-size: 1.5
+    }
+
     .bannertop {
       height: 40px;
       padding: 0 0.25rem;
