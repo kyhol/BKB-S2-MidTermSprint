@@ -9,7 +9,7 @@
   position: relative;
 }
 
-footer {
+footer {  
   display: flex;
   flex-direction: row;
   background-color: #023047;
@@ -24,6 +24,7 @@ footer {
   z-index: 3;
   margin-top: 32px;
   box-sizing: content-box;
+
 }
 
 #footerlogo {
@@ -136,6 +137,19 @@ body {
     margin-inline: 0;
     padding: 8px;
   }
+
+  footer {
+    font-size: smaller;
+  }
+
+  #footerlogo {
+    width: 40px;
+    margin: 8px;
+  }
+
+  #socials {
+    width: 50%;
+  }
 }
 
 /* Smartphone View */
@@ -146,5 +160,18 @@ body {
     margin: 0;
     margin-inline: 0;
     padding: 0;
+  }
+
+  footer {
+    font-size: x-small;
+  }
+
+  #footerlogo {
+    width: 30px;
+    margin: 10px;
+  }
+
+  #socials {
+    width: 66%;
   }
 }

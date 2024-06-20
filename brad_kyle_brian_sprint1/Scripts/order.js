@@ -323,7 +323,8 @@ function orderAlert(msg, gfg) {
               }
               orderInnerHtml.innerHTML += '<hr><p>Subtotal: $' + subTotal + '</p><p>Tax: $' + (subTotal * 0.15).toFixed(2) + '</p><p>Total: $' + (subTotal * 1.15).toFixed(2) + '</p>';
           } else {
-              orderInnerHtml.innerHTML = "Why don't you treat yourself to one of Gary's special treats?"
+              orderInnerHtml.innerHTML = "<p>Why don't you treat yourself to one of Gary's special treats?</p>"
+
           }
       };
       

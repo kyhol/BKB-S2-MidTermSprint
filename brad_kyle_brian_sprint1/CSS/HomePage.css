@@ -479,7 +479,7 @@ h2 {
     transform: scale(1.7); /* Enlarge the image on hover */
 }
 
-@media screen and (min-width: 768px) and (max-width: 1208px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     * {
         /* Reset box-sizing and adjust default font size for mobile */
         box-sizing: border-box;
@@ -827,3 +827,6 @@ h2 {
     }
   }
   
+  @media screen and (min-width: 1025px) and (max-width: 1370px) {
+    
+  }
