@@ -150,7 +150,7 @@ window.addEventListener("DOMContentLoaded", function () {
         // Hide the popup after 3 seconds
         setTimeout(() => {
           popup.classList.remove("show");
-        }, 3000);
+        }, 5000);
       }
     })
     .catch((error) => {
