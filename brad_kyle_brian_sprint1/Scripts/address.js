@@ -4,10 +4,10 @@
 
 function addressAutocomplete(containerElement, callback, options) {
     
-    require('dotenv').config();
+    // require('dotenv').config();
 
     // Get your own API Key on https://myprojects.geoapify.com
-    const apiKey = process.env.API_KEY;
+    // const apiKey = process.env.API_KEY;
 
     const MIN_ADDRESS_LENGTH = 3;
     const DEBOUNCE_DELAY = 300;
