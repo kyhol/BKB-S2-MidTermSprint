@@ -326,7 +326,7 @@ document.addEventListener("DOMContentLoaded", function () {
         subTotal += itemTotal;
         orderInnerHtml.innerHTML += `
         <div class="orderItem">  
-        <div class="itemname"><p>${item}:</p></div><div class="itemtotal"><div><p>\$${price}</p></div><div><p>x</p></div></div> 
+        <div class="itemname"><p>${item}:</p></div><div class="itemtotal"><div><p>\$${price.toFixed(2)}</p></div><div><p>x</p></div></div> 
         <div class="buttons"><div><button class="decrement" data-index="${i}"><img src="../Images/OrderPics/sub.svg" alt="-"></button></div>
             <div><p>${quantity}</p></div>
             <div><button class="increment" data-index="${i}"><img src="../Images/OrderPics/add.svg" alt="+"></button></div></div>
