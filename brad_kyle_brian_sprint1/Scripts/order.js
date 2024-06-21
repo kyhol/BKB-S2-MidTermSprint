@@ -1,6 +1,13 @@
 //The address function below was learned from https://www.geoapify.com/tutorial/address-input-for-address-validation-and-address-verification-forms-tutorial
 
+
+
 function addressAutocomplete(containerElement, callback, options) {
+    
+    require('dotenv').config();
+
+    // Get your own API Key on https://myprojects.geoapify.com
+    const apiKey = process.env.API_KEY;
 
     const MIN_ADDRESS_LENGTH = 3;
     const DEBOUNCE_DELAY = 300;
@@ -78,10 +85,6 @@ function addressAutocomplete(containerElement, callback, options) {
         /* Create a new promise and send geocoding request */
         const promise = new Promise((resolve, reject) => {
           currentPromiseReject = reject;
-  
-          // The API Key provided is restricted to JSFiddle website
-          // Get your own API Key on https://myprojects.geoapify.com
-          const apiKey = "Your Api";
   
           var url = `https://api.geoapify.com/v1/geocode/autocomplete?text=${encodeURIComponent(currentValue)}&format=json&limit=5&apiKey=${apiKey}`;
   
@@ -217,12 +220,12 @@ function addressAutocomplete(containerElement, callback, options) {
     });
   }
   
-  addressAutocomplete(document.getElementById("autocomplete-container"), (data) => {
-    console.log("Selected option: ");
-    console.log(data);
-  }, {
-    placeholder: "Address:"
-  });
+  // addressAutocomplete(document.getElementById("autocomplete-container"), (data) => {
+  //   console.log("Selected option: ");
+  //   console.log(data);
+  // }, {
+  //   placeholder: "Address:"
+  // });
 
 function orderAlert(msg, gfg) {
     var confirmBox = document.getElementById("orderContainer");
@@ -306,25 +309,75 @@ function orderAlert(msg, gfg) {
           });
         });
 
-        window.onload = function() {
-          const data = localStorage.getItem('cart');
-          const orderInnerHtml = document.getElementById('orderinnerhtml');
-      
-          if (data) {
-              const cartItems = JSON.parse(data);
-              let subTotal = 0;
-              for (let i = 0; i < cartItems.length; i++) {
-                  let item = cartItems[i]['name']
-                  let price = cartItems[i]['price']
-                  let quantity = cartItems[i]['quantity']
-                  let itemTotal = price * quantity
-                  subTotal += itemTotal
-                  orderInnerHtml.innerHTML += '<p>' + item + ' -- ' + price + ' x ' + quantity + ' = ' + itemTotal + '</p>';
-              }
-              orderInnerHtml.innerHTML += '<hr><p>Subtotal: $' + subTotal + '</p><p>Tax: $' + (subTotal * 0.15).toFixed(2) + '</p><p>Total: $' + (subTotal * 1.15).toFixed(2) + '</p>';
-          } else {
-              orderInnerHtml.innerHTML = "<p>Why don't you treat yourself to one of Gary's special treats?</p>"
+document.addEventListener("DOMContentLoaded", function () {
+  function renderCart() {
+    const data = localStorage.getItem("cart");
+    const orderInnerHtml = document.getElementById("orderinnerhtml");
+    orderInnerHtml.innerHTML = ""; // Clear previous content
 
-          }
-      };
-      
+    if (data) {
+      const cartItems = JSON.parse(data);
+      let subTotal = 0;
+      for (let i = 0; i < cartItems.length; i++) {
+        let item = cartItems[i]["name"];
+        let price = cartItems[i]["price"];
+        let quantity = cartItems[i]["quantity"];
+        let itemTotal = price * quantity;
+        subTotal += itemTotal;
+        orderInnerHtml.innerHTML += `
+        <div class="orderItem">  
+        <div class="itemname"><p>${item}:</p></div><div class="itemtotal"><div><p>\$${price}</p></div><div><p>x</p></div></div> 
+        <div class="buttons"><div><button class="decrement" data-index="${i}"><img src="../Images/OrderPics/sub.svg" alt="-"></button></div>
+            <div><p>${quantity}</p></div>
+            <div><button class="increment" data-index="${i}"><img src="../Images/OrderPics/add.svg" alt="+"></button></div></div>
+            <div class="itemtotal"><div><p>=</p></div><div><p>\$${itemTotal.toFixed(2)}</div></div>
+        </div>
+        `;
+      }
+      orderInnerHtml.innerHTML += `
+        <hr>
+        <p>Subtotal: $${subTotal.toFixed(2)}</p>
+        <p>Tax: $${(subTotal * 0.15).toFixed(2)}</p>
+        <p>Total: $${(subTotal * 1.15).toFixed(2)}</p>
+      `;
+    } else {
+      orderInnerHtml.innerHTML =
+        "<p>Why don't you treat yourself to one of Gary's special treats?</p>";
+    }
+
+    // Attach event listeners to increment and decrement buttons
+    const incrementButtons = document.querySelectorAll(".increment");
+    incrementButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        updateQuantity(this.dataset.index, 1);
+      });
+    });
+
+    const decrementButtons = document.querySelectorAll(".decrement");
+    decrementButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        updateQuantity(this.dataset.index, -1);
+      });
+    });
+  }
+
+  function updateQuantity(index, change) {
+    // Retrieve the cart from localStorage
+    let cartItems = JSON.parse(localStorage.getItem("cart"));
+
+    // Update the quantity
+    cartItems[index].quantity += change;
+
+    // Ensure quantity doesn't go below 1
+    if (cartItems[index].quantity < 1) {
+      cartItems[index].quantity = 1;
+    }
+
+    // Save the updated cart back to localStorage
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+
+    // Re-render the cart items
+    renderCart();
+  }
+  renderCart();
+});
