@@ -32,7 +32,6 @@ Date finished: 2024-06-21? */
   font-family: "Raleway", sans-serif;
   font-size: 3rem;
   font-weight: 700;
-  margin-right: 20rem;
 }
 
 .bannerbuttons {
@@ -233,7 +232,7 @@ svg {
 
 .biocontainer2 {
   border-radius: 5.375rem;
-  background: #023047;
+  background: #f9f9f9;
   padding-top: 1.75rem;
 }
 
