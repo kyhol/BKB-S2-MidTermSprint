@@ -145,13 +145,13 @@ z-index: 0;
   text-align: right;
   word-spacing: fill;
   border: #6F7DFB 1px solid;
+  padding: 5px;
 }
 
 #orderinnerhtml p {
   margin: 10px 0;
-  padding-right: 5px;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 0.8rem;
+  font-size:
 }
 
 .input-container {
