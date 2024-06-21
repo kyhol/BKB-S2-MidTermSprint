@@ -220,12 +220,12 @@ function addressAutocomplete(containerElement, callback, options) {
     });
   }
   
-  // addressAutocomplete(document.getElementById("autocomplete-container"), (data) => {
-  //   console.log("Selected option: ");
-  //   console.log(data);
-  // }, {
-  //   placeholder: "Address:"
-  // });
+addressAutocomplete(document.getElementById("autocomplete-container"), (data) => {
+    console.log("Selected option: ");
+    console.log(data);
+  }, {
+    placeholder: "Address:"
+  });
 
 function orderAlert(msg, gfg) {
     var confirmBox = document.getElementById("orderContainer");
