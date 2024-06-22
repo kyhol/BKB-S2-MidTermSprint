@@ -38,6 +38,7 @@ h1 {
   flex-direction: column;
   border: #6f7dfb 1px solid;
   padding: 10px;
+  justify-content: space-between;
 }
 
 #column2 {
@@ -66,8 +67,7 @@ h1 {
 #phone,
 #email,
 #address,
-#card,
-#cardvalid {
+#card {
   flex: 1;
   outline: none;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -77,11 +77,24 @@ h1 {
   width: 100%;
 }
 
+#cvv {
+  font-size: 16px;
+  min-width: 3rem;
+}
+
 #cardvalid {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   background-color: #e8f7fb;
+  margin-top: 10px;
+  min-height: 100px;
+  padding: 5px;
+}
+
+input {
+  margin: 10px 0 10px 0;
 }
 
 .autocomplete-items {

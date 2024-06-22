@@ -13,6 +13,7 @@ function orderAlert(msg, gfg) {
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
   const nameInput = document.getElementById("name");
+  const addrInput = document.getElementById("address");
   const phoneInput = document.getElementById("phone");
   const emailInput = document.getElementById("email");
   const cardInput = document.getElementById("card");
@@ -31,6 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!namePattern.test(nameInput.value)) {
       valid = false;
       alert("Name contains invalid characters.");
+    }
+
+    if (addrInput.value === "") {
+      valid = false;
+      alert("Address cannot be empty.");
     }
 
     const phonePattern = /^\d{10}$/;
@@ -74,10 +80,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (valid) {
       orderAlert(
-        "Thank you for your order!\nHang tight, Gary is getting your goodies\nready to GO!",
-        function () {
-          console.log("Alert confirmed");
-        }
+      "Thank you for your order!\nHang tight, Gary is getting your goodies\nready to GO!",
+      function () {
+        console.log("Alert confirmed");
+        localStorage.removeItem("cart");
+      }
       );
     }
   });
@@ -123,12 +130,10 @@ document.addEventListener("DOMContentLoaded", function () {
             <button class="increment" data-index="${i}">
             <img src="../Images/OrderPics/add.svg" alt="+">
             </button></div></div>
-            <div class="itemtotal"><div><p>  = &nbsp;</p></div><div><p>\$${itemTotal.toFixed(
-              2
-            )}</div>
+            <div class="itemtotal"><div><p>  = &nbsp;</p></div><div><p>\$${itemTotal.toFixed(2)}</p>
+            </div>
             </div>
           </div>
-         
         </div>
         `;
       }

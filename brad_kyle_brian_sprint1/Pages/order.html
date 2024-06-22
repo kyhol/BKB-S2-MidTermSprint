@@ -56,13 +56,15 @@
                 <div class="autocomplete-container" id="autocomplete-container"></div>
                 <form>
                     <input type="text" id="phone" name="phone" placeholder="Phone Number:"><br>
-                    <input type="email" id="email" name="email" placeholder="Email:"><br>
+                    <input type="email" id="email" name="email" placeholder="Email:"><br><br>
+                    <hr>
+                    <br>
                 </form>
                 <h2>Payment:</h2>
                 <div id="pment">
                 <h3>Choose Payment Type:</h3>
                 <form>
-                    <input type="radio" id="credit" name="payme" value="debit">
+                    <input type="radio" id="credit" name="payme" value="debit" checked>
                     <label for="credit">Credit</label><br>
                     <input type="radio" id="debit" name="payme" value="credit">
                     <label for="debit">Debit</label><br>
@@ -77,6 +79,8 @@
                     </div>
                 </form>
             </div>
+            <hr>
+            <br>
             </div>
             <div id="column2">
                 <h2>Order:</h2>
@@ -89,7 +93,7 @@
                 </div>
                 <h3>Order Type:</h3>
                 <form>
-                    <input type="radio" id="delivery" name="ordertype" value="delivery">
+                    <input type="radio" id="delivery" name="ordertype" value="delivery" checked>
                     <label for="delivery">Delivery</label><br>
                     <input type="radio" id="pickup" name="ordertype" value="delivery">
                     <label for="pickup">Pickup</label><br>
@@ -97,7 +101,7 @@
                 <br>
                 <h3>Choose Order Time:</h3>
                 <form>
-                    <input type="radio" id="now" name="ordertime" value="now">
+                    <input type="radio" id="now" name="ordertime" value="now" checked>
                     <label for="now">Now</label><br>
                     <input type="radio" id="later" name="ordertime" value="later">
                     <label for="later"><label for="ordertime">Choose Time:</label>
