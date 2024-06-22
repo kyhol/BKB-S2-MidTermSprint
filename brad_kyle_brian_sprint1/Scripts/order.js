@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Ensure quantity doesn't go below 1
     if (cartItems[index].quantity < 1) {
-      cartItems[index].quantity = 1;
+      cartItems.splice(index, 1);
     }
 
     // Save the updated cart back to localStorage
