@@ -315,6 +315,7 @@ h2 {
   display: flex;
   justify-content: center;
     align-items: flex-end;
+    width:31rem;
 }
 .menuButtonContainer {
     width: 67.5rem;
@@ -333,12 +334,12 @@ h2 {
   text-align: center;
   align-items: center;
   position:absolute;
-  width: 7rem;
   height: 2.5rem;
   opacity: 0.95;
   border-radius: 1.5rem;
   background: #da722c;
   margin-bottom: 1rem;
+  width: 12rem;
 }
 
 .delMenuButtonText {
@@ -605,7 +606,6 @@ h2 {
     display: flex;
     align-content: center;
     justify-content: center;
-    width: 16rem;
     height: 2rem;
   }
 
@@ -639,13 +639,8 @@ h2 {
   }
   .deliverMenuContainer {
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 20rem;
     flex-shrink: 0;
-    background: #023047;
-    width: 24rem;
+
   }
   .address {
     display: flex;
@@ -785,7 +780,6 @@ h2 {
     display: flex;
     align-content: center;
     justify-content: center;
-    width: 16rem;
     height: 2rem;
   }
 
@@ -820,13 +814,6 @@ h2 {
   }
   .deliverMenuContainer {
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 20rem;
-    flex-shrink: 0;
-    background: #023047;
-    width: 24rem;
   }
   .address {
     display: flex;
