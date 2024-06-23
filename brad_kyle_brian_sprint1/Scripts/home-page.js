@@ -1,11 +1,12 @@
-// Description:
+// Description: Javascript for the home page of the mid-term sprint project. "Gary Blue's Diner".
 // Name(s): Kyle Hollett Brian Janes Brad Avery
 // Date Created: 2024-06-17
-// Date finished: 2024-06-21?
+// Date content done: 2024-06-20
+// Date polish finished: 2024-06-27
 
 var index = 0;
 
-show_image(index);
+show_image(index); // Function to show the image carousel on the home page. with the dots at the bottom to show which image is currently being displayed.
 
 function show_image(i) {
     index += i;
@@ -36,7 +37,7 @@ var index2 = 0;
 
 showImage('review1', index1);
 
-function showImage(carouselId, i) {
+function showImage(carouselId, i) { //Image carousel function copied and edited from above.
     if (carouselId === 'review1') {
         index1 += i;
         var images = document.getElementById('slider-container1').getElementsByClassName("reviewPics");
@@ -62,7 +63,7 @@ function showImage(carouselId, i) {
 }
 
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () { // display list of hours of operation, address, contact, and details.
     fetch('../Data/restaurant_data.json')
         .then(response => {
             if (!response.ok) {
@@ -129,11 +130,26 @@ document.addEventListener('DOMContentLoaded', function () {
 //     })
 //     .catch(error => console.error('Error fetching data:', error)); // Log any errors that occur during the fetch
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {  //function used in conjunction with CSS to animate the letters starting on the left and going through to the right at .2s intervals
     const letters = document.querySelectorAll('.letter');
     letters.forEach((letter, index) => {
         setTimeout(() => {
             letter.classList.add('animate');
-        }, index * 200); // Delay each letter by 100ms
+        }, index * 200); 
     });
 });
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const carousel = document.querySelector('.carousel');
+//     const images = carousel.querySelectorAll('img');
+//     let currentIndex = 0;
+//     function showNextImage() {
+//         images[currentIndex].classList.remove('active');
+//         images[currentIndex].classList.add('next');
+//         currentIndex = (currentIndex + 1) % images.length;  // Wraps around using modulo
+//         images[currentIndex].classList.remove('next');
+//         images[currentIndex].classList.add('active');
+//     }
+//     setInterval(showNextImage, 5000);
+// });
