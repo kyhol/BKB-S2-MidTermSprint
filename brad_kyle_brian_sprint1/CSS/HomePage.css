@@ -1,7 +1,8 @@
-/* Description:
-Name(s): Kyle Hollett Brian Janes Brad Avery
-Date Created: 2024-06-17
-Date finished: 2024-06-21? */
+/* Description: CSS for Restaurant MID-TERM page
+ Name(s): Kyle Hollett Brian Janes Brad Avery
+ Date Created: 2024-06-17
+ Date content done: 2024-06-20
+ Date polish finished: 2024-06-27
 
 /* HEADER CSS */
 .bannertop {
@@ -504,7 +505,7 @@ h2 {
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   * {
-    /* Reset box-sizing and adjust default font size for mobile */
+    /* Reset box-sizing and adjust default font size for tablet */
     box-sizing: border-box;
     font-size: 14px;
   }
