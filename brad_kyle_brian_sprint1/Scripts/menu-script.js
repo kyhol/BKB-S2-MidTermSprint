@@ -148,13 +148,29 @@ window.addEventListener("DOMContentLoaded", function () {
       // Function to show popup notification
       function showPopup(message) {
         const popup = document.getElementById("cart-notification");
-        popup.textContent = message; // Update the popup message
+        popup.querySelector("p").textContent = message; // Update the popup message
         popup.classList.add("show"); // Add the show class to make it visible
 
-        // Hide the popup after 3 seconds
-        setTimeout(() => {
+        // Add event listener to the close button
+        const closeButton = popup.querySelector(".close-btn");
+        closeButton.addEventListener("click", function () {
+          popup.classList.remove("show"); // Hide the popup when 'X' is clicked
+        });
+
+        // Add event listeners for the buttons
+        const continueShoppingBtn = popup.querySelector(
+          ".continue-shopping-btn"
+        );
+        const viewCartBtn = popup.querySelector(".view-cart-btn");
+
+        continueShoppingBtn.addEventListener("click", function () {
           popup.classList.remove("show");
-        }, 5000);
+        });
+
+        viewCartBtn.addEventListener("click", function () {
+          // For example, redirect to the order page
+          window.location.href = "order.html";
+        });
       }
     })
     .catch((error) => {

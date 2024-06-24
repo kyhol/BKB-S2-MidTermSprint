@@ -179,15 +179,17 @@ DATE: June 24th, 2024
 #addon-card li:hover .add-to-cart-btn {
   display: block;
 }
-
 /* =============================================== */
 /* CSS FOR POPUP */
 /* =============================================== */
 .cart-popup {
+  width: 400px;
+  height: 200px; /* Adjusted to fit the new content */
   display: none;
   position: fixed;
   bottom: 50%;
-  left: 40%;
+  left: 50%;
+  transform: translate(-50%, 50%); /* Center horizontally and vertically */
   background-color: #4caf50;
   color: white;
   padding: 16px;
@@ -202,6 +204,44 @@ DATE: June 24th, 2024
 .cart-popup.show {
   display: block;
   opacity: 1;
+}
+
+/* Close button styles*/
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+.close-btn:hover {
+  transform: scale(1.1);
+  color: #da722c;
+}
+
+/* Popup buttons */
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 16px; /* Positioned at the bottom */
+  left: 16px;
+  right: 16px;
+}
+.popup-buttons button {
+  background-color: white;
+  color: #4caf50;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.popup-buttons button:hover {
+  background-color: #ddd;
+  color: #4caf50;
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 /* =============================================== */
