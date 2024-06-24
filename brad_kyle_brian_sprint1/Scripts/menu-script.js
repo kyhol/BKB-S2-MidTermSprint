@@ -1,3 +1,7 @@
+// DESCRIPTION: JS page for Gary blue's diner website
+// AUTHOR: Brian Janes
+// DATE: June 24th, 2024
+
 window.addEventListener("DOMContentLoaded", function () {
   console.log("DOM fully loaded and parsed: MENU PAGE");
 
@@ -7,11 +11,11 @@ window.addEventListener("DOMContentLoaded", function () {
     .then((data) => {
       const menus = data.menu;
 
-      // Function to generate HTML for each menu section
+      // Generating HTML for each menu section
       function generateMenuHTML(menuData) {
         let html = "";
 
-        // Iterate over menu items
+        // Menu cards hml
         menuData.items.forEach((item) => {
           html += `
             <div class="menu-card">
@@ -34,7 +38,7 @@ window.addEventListener("DOMContentLoaded", function () {
           `;
         });
 
-        // Addons HTML
+        // Addons card HTML
         let addonsHtml = "";
         if (menuData.addons && menuData.addons.length > 0) {
           addonsHtml += `

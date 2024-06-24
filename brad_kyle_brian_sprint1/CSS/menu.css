@@ -1,19 +1,22 @@
-/* Main Menu page Layout */
+/* 
+DESCRIPTION: CSS page for Gary blue's diner website
+AUTHOR: Brian Janes
+DATE: June 24th, 2024 
+*/
 
+/* Main Menu page Layout */
 .menu-page-div {
   font-family: poppins;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .main-menu-div {
   width: 100%;
   height: 100%;
 }
 
 /* This is defining each menu section (Breakfast, lunch, dinner, dessert) */
-
 .menu-section {
   width: 100%;
   display: grid;
@@ -23,7 +26,6 @@
 }
 
 /* Just styling the header and "metadata" of each section */
-
 .menu-section-info {
   width: 100%;
   display: flex;
@@ -33,11 +35,9 @@
   padding: 16px;
   grid-column: 1 / -1;
 }
-
 .menu-section-info span {
   font-style: italic;
 }
-
 .menu-section-info h2 {
   width: 80%;
   border-bottom: 2px solid #da722c;
@@ -45,7 +45,6 @@
 }
 
 /* This menu-card is for each item in a section of them menu. */
-
 .menu-card {
   background-color: #ffffff;
   width: 100%;
@@ -92,7 +91,6 @@
 }
 
 /* Each menu section contains one addon card for items that can be added to your order. the contents are slightly different on these so i chose to style them a little bit differently than the menu card */
-
 .addon-card {
   background-color: #ffffff;
   width: 100%;
@@ -151,8 +149,7 @@
   transform: translate(-50%, -50%) scale(1.1);
   transition: transform 0.3s ease-in-out;
 }
-
-/* Show the button on hover */
+/* Showing  the button on hover */
 .menu-card:hover .add-to-cart-btn,
 .addon-card li:hover .add-to-cart-btn {
   display: block;
@@ -162,7 +159,6 @@
 #addon-card li {
   position: relative;
 }
-
 #addon-card li .add-to-cart-btn {
   width: 100%;
   display: none;
@@ -222,7 +218,6 @@
     margin-top: 0px;
     gap: 16px;
   }
-
   .menu-card p {
     font-size: 0.8rem;
     padding: 8px;
