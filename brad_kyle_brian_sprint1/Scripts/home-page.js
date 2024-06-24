@@ -140,16 +140,29 @@ document.addEventListener('DOMContentLoaded', () => {  //function used in conjun
 });
 
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     const carousel = document.querySelector('.carousel');
-//     const images = carousel.querySelectorAll('img');
-//     let currentIndex = 0;
-//     function showNextImage() {
-//         images[currentIndex].classList.remove('active');
-//         images[currentIndex].classList.add('next');
-//         currentIndex = (currentIndex + 1) % images.length;  // Wraps around using modulo
-//         images[currentIndex].classList.remove('next');
-//         images[currentIndex].classList.add('active');
-//     }
-//     setInterval(showNextImage, 5000);
-// });
+document.addEventListener("DOMContentLoaded", function() {
+    const deliverMenuContainer = document.querySelector('.deliverMenuContainer');
+    const image = document.createElement('img');  // Create an img element
+    deliverMenuContainer.appendChild(image);  // Append the img element to the container
+
+    const imagePaths = [
+        '../Images/MenuAd/MenuAd.svg', 
+        '../Images/MenuAd/MenuAd2.svg', 
+        '../Images/MenuAd/MenuAd3.svg'
+    ];
+    let currentIndex = 0;
+
+    function showNextImage() {
+        image.classList.remove('active'); // Remove the active class to start the fade-out transition
+
+        setTimeout(() => {
+            image.src = imagePaths[currentIndex]; // Change the image source
+            image.classList.add('active'); // Add the active class to start the fade-in transition
+            currentIndex = (currentIndex + 1) % imagePaths.length; // Wrap around using modulo
+        }, 1000); // Wait for the fade-out transition to complete
+    }
+
+    setInterval(showNextImage, 5000);
+    showNextImage(); // Show the first image immediately
+});
+
