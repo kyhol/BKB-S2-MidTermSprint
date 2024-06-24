@@ -42,7 +42,7 @@ window.addEventListener("DOMContentLoaded", function () {
         let addonsHtml = "";
         if (menuData.addons && menuData.addons.length > 0) {
           addonsHtml += `
-            <div class="addon-card" id="addon-card">
+            <div class="addon-card" id="addon-card-id">
               <h3>Addons</h3>
               <ul>
           `;

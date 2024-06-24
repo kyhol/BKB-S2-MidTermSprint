@@ -156,10 +156,10 @@ DATE: June 24th, 2024
 }
 
 /* Position relative for containing block */
-#addon-card li {
+#addon-card-id li {
   position: relative;
 }
-#addon-card li .add-to-cart-btn {
+#addon-card-id li .add-to-cart-btn {
   width: 100%;
   display: none;
   position: absolute;
@@ -176,7 +176,7 @@ DATE: June 24th, 2024
 }
 
 /* Show the button on hover for each addon item */
-#addon-card li:hover .add-to-cart-btn {
+#addon-card-id li:hover .add-to-cart-btn {
   display: block;
 }
 /* =============================================== */
@@ -225,7 +225,7 @@ DATE: June 24th, 2024
   display: flex;
   justify-content: space-between;
   position: absolute;
-  bottom: 16px; /* Positioned at the bottom */
+  bottom: 16px;
   left: 16px;
   right: 16px;
 }
