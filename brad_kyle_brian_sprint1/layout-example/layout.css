@@ -1,0 +1,245 @@
+/*
+GLOBAL CSS RESET
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+:root {
+  --text-shadow-var: 1px 1px 1px rgba(19, 19, 19, 0.75);
+}
+
+/* MY WRITTEN CSS */
+
+header {
+  width: 100%;
+  height: 112px;
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 4rem;
+  position: relative;
+  z-index: 3;
+}
+.left-side {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.left-side img {
+  width: 6rem;
+  height: 6rem;
+}
+.right-side {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.right-side button {
+  border: none;
+  padding: 4px;
+  width: 100px;
+  border-radius: 8px;
+  background-color: #da722c;
+  color: white;
+}
+.right-side button:hover {
+  cursor: pointer;
+}
+nav {
+  width: 100%;
+  background-color: red;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+}
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.nav-links {
+  display: flex;
+  width: 35%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav-links a:link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-shadow: var(--text-shadow-var);
+}
+nav a:hover {
+  transform: scale(1.1);
+  text-decoration: none;
+  color: white;
+}
+.nav-links a:visited {
+  text-decoration: none;
+  color: blue;
+  text-decoration: line-through;
+}
+
+main {
+  background-color: pink;
+  min-height: 100vh;
+  position: relative;
+}
+.main-container {
+  background-color: blue;
+  width: calc(100% - 10rem);
+  min-height: 100vh;
+  height: 100%;
+  margin-inline: auto;
+  padding-top: 2rem;
+}
+section {
+  width: calc(100% - 6rem);
+  margin: 2rem auto;
+  height: auto;
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+footer {
+  position: relative;
+  background-color: green;
+  height: 48px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+/* MEDIA QUERIES */
+
+/* Tablet View */
+@media (max-width: 768px) {
+  header {
+    padding-inline: 2rem;
+  }
+  .main-container {
+    width: calc(100% - 2rem);
+    margin-inline: auto;
+    padding-top: 1rem;
+  }
+  section {
+    width: calc(100% - 2rem);
+    margin: 0.5rem auto;
+  }
+  nav {
+    height: 32px;
+  }
+  .nav-links {
+    width: 100%;
+  }
+}
+
+/* Weird middle ground */
+@media (max-width: 680px) {
+  header {
+    padding-inline: 1rem;
+  }
+  header h1 {
+    font-size: 1.6rem;
+  }
+  .right-side {
+    gap: 1rem;
+  }
+  .left-side {
+    gap: 1rem;
+  }
+}
+
+/* Smartphone View */
+@media (max-width: 480px) {
+  header {
+    padding-inline: 1rem;
+    height: 88px;
+  }
+  header h1 {
+    font-size: 1.3rem;
+  }
+  .left-side {
+    gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .left-side img {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  .right-side {
+    gap: 1rem;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  header button {
+    width: 60px;
+  }
+}
