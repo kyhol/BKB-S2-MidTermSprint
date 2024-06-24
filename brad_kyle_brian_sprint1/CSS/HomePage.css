@@ -6,17 +6,24 @@
 
 /* HEADER CSS */
 .bannertop {
-  position: static;
-  width: 100%;
-  height: 112px;
-  flex-shrink: 0;
-  opacity: 0.9;
-  background: #057ada;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
-}
+    position: static;
+    width: 100%;
+    height: 112px;
+    flex-shrink: 0;
+    opacity: 0.9;
+    background: #057ada;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    transition: all 0.3s ease; /* Optional: for a smooth transition */
+  }
+  
+  .bannertop.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
 
 .bannermascot img {
   width: 6rem;
@@ -317,6 +324,10 @@ h2 {
   justify-content: center;
     align-items: flex-end;
     width:31rem;
+    border-radius: 70.5rem;
+}
+.deliverMenuContainer img{
+    border-radius: 2rem;
 }
 .menuButtonContainer {
     width: 67.5rem;
@@ -341,6 +352,7 @@ h2 {
   background: #da722c;
   margin-bottom: 1rem;
   width: 12rem;
+  margin-right:5px;
 }
 
 .delMenuButtonText {
