@@ -8,43 +8,43 @@
         {
           "item_name": "Country Breakfast",
           "description": "Two eggs any style, bacon or sausage, home fries, and a fluffy buttermilk biscuit with sausage gravy.",
-          "src": "../Images/Menu Items/Country_Breakfast.jpeg",
+          "src": "../Images/MenuItems/Country_Breakfast.jpeg",
           "price": 11.49
         },
         {
           "item_name": "Western Omelette",
           "description": "Omelette with ham, bell peppers, onions, and cheddar cheese. Served with your choice of toast and home fries.",
-          "src": "../Images/Menu Items/Western_Omelette.jpeg",
+          "src": "../Images/MenuItems/Western_Omelette.jpeg",
           "price": 10.99
         },
         {
           "item_name": "Waffles",
           "description": "Crispy Belgian waffles served with butter and maple syrup.",
-          "src": "../Images/Menu Items/Waffles.jpeg",
+          "src": "../Images/MenuItems/Waffles.jpeg",
           "price": 9.49
         },
         {
           "item_name": "Vegetarian Skillet",
           "description": "Scrambled eggs with sautéed mushrooms, spinach, tomatoes, and Swiss cheese, served over crispy hashbrowns.",
-          "src": "../Images/Menu Items/Vegetarian_Skillet.jpeg",
+          "src": "../Images/MenuItems/Vegetarian_Skillet.jpeg",
           "price": 11.99
         },
         {
           "item_name": "Gary's Blueberry Pancakes",
           "description": "Fluffy pancakes packed with fresh blueberries, served with maple syrup and a dollop of whipped cream.",
-          "src": "../Images/Menu Items/Gary_Blueberry_Pancakes.jpeg",
+          "src": "../Images/MenuItems/Gary_Blueberry_Pancakes.jpeg",
           "price": 9.99
         },
         {
           "item_name": "Denver Skillet",
           "description": "Scrambled eggs with diced ham, bell peppers, onions, and cheddar cheese, served over crispy hashbrowns.",
-          "src": "../Images/Menu Items/Denver_Skillet.jpeg",
+          "src": "../Images/MenuItems/Denver_Skillet.jpeg",
           "price": 12.49
         },
         {
           "item_name": "French Toast",
           "description": "Thick slices of bread dipped in a cinnamon-vanilla batter, grilled to golden perfection, and dusted with powdered sugar.",
-          "src": "../Images/Menu Items/French_Toast.jpeg",
+          "src": "../Images/MenuItems/French_Toast.jpeg",
           "price": 8.99
         }
       ],
@@ -87,37 +87,37 @@
         {
           "item_name": "Big Gary Chicken Sandwich",
           "description": "A hearty sandwich featuring a crispy, golden-fried chicken breast, topped with lettuce, tomato, pickles, and Gary's special sauce on a toasted brioche bun.",
-          "src": "../Images/Menu Items/Big_Gary_Sandwich.jpeg",
+          "src": "../Images/MenuItems/Big_Gary_Sandwich.jpeg",
           "price": 12.99
         },
         {
           "item_name": "Classic Cheeseburger",
           "description": "One juicy beef patty flame grilled, topped with American cheese, lettuce, tomato, onion, and pickles on a toasted sesame bun.",
-          "src": "../Images/Menu Items/Smashburger.jpeg",
+          "src": "../Images/MenuItems/Smashburger.jpeg",
           "price": 11.99
         },
         {
           "item_name": "Double Cheeseburger",
           "description": "Two juicy beef patties flame grilled, topped with American cheese, lettuce, tomato, onion, and pickles on a toasted sesame bun.",
-          "src": "../Images/Menu Items/Double_Smashburger.jpeg",
+          "src": "../Images/MenuItems/Double_Smashburger.jpeg",
           "price": 11.99
         },
         {
           "item_name": "Chili Cheese Fries",
           "description": "Golden fries smothered in homemade chili and melted cheddar cheese. Topped with green onions and a dollop of sour cream.",
-          "src": "../Images/Menu Items/Chili_Cheese_Fries.jpeg",
+          "src": "../Images/MenuItems/Chili_Cheese_Fries.jpeg",
           "price": 8.99
         },
         {
           "item_name": "Blue's Fish & Chips",
           "description": "Beer-battered fish fillets served with crispy fries, tartar sauce, and coleslaw.",
-          "src": "../Images/Menu Items/Fish_n_Chips.jpeg",
+          "src": "../Images/MenuItems/Fish_n_Chips.jpeg",
           "price": 14.99
         },
         {
           "item_name": "Caesar Salad",
           "description": "Crisp romaine lettuce, croutons, and parmesan cheese tossed in Caesar dressing.",
-          "src": "../Images/Menu Items/Classic_Caesar.jpeg",
+          "src": "../Images/MenuItems/Classic_Caesar.jpeg",
           "price": 9.99
         }
       ],
@@ -148,25 +148,25 @@
         {
           "item_name": "Southern Fried Chicken",
           "description": "Buttermilk-marinated chicken fried to perfection, served with creamy mashed potatoes, gravy, and sautéed green beans.",
-          "src": "../Images/Menu Items/Southern_Fried_Chicken.jpeg",
+          "src": "../Images/MenuItems/Southern_Fried_Chicken.jpeg",
           "price": 13.99
         },
         {
           "item_name": "Blue's Salisbury Steak",
           "description": "Seasoned ground beef steak grilled and smothered in mushroom gravy. Served with mashed potatoes and buttered corn.",
-          "src": "../Images/Menu Items/Salisbury_Steak.jpeg",
+          "src": "../Images/MenuItems/Salisbury_Steak.jpeg",
           "price": 12.99
         },
         {
           "item_name": "Hot Turkey Sandwich",
           "description": "Sliced roasted turkey piled high on white bread, topped with gravy. Served with mashed potatoes and cranberry sauce.",
-          "src": "../Images/Menu Items/Hot_Turkey_Sandwich.jpeg",
+          "src": "../Images/MenuItems/Hot_Turkey_Sandwich.jpeg",
           "price": 11.49
         },
         {
           "item_name": "Vegetable Stir Fry",
           "description": "Assorted fresh vegetables stir-fried in a savory sauce, served over steamed rice.",
-          "src": "../Images/Menu Items/Vegetable_Stir_Fry.jpeg",
+          "src": "../Images/MenuItems/Vegetable_Stir_Fry.jpeg",
           "price": 10.99
         }
       ],
@@ -216,31 +216,31 @@
         {
           "item_name": "Banana Split",
           "description": "A classic dessert with vanilla, chocolate, and strawberry ice cream, banana slices, whipped cream, nuts, and cherries.",
-          "src": "../Images/Menu Items/Banana_Split.jpeg",
+          "src": "../Images/MenuItems/Banana_Split.jpeg",
           "price": 7.99
         },
         {
           "item_name": "New York Cheesecake",
           "description": "Creamy and rich cheesecake with a graham cracker crust. Topped with your choice of fruit sauce.",
-          "src": "../Images/Menu Items/New_York_Cheesecake.jpeg",
+          "src": "../Images/MenuItems/New_York_Cheesecake.jpeg",
           "price": 6.99
         },
         {
           "item_name": "Cookie Pizza",
           "description": "Giant cookie baked like a pizza, topped with chocolate chips, M&M's, and drizzled with chocolate syrup.",
-          "src": "../Images/Menu Items/Cookie_Pizza.jpeg",
+          "src": "../Images/MenuItems/Cookie_Pizza.jpeg",
           "price": 8.49
         },
         {
           "item_name": "Cosmic Brownie",
           "description": "Fudgy brownie topped with colorful candy-coated chocolate pieces and a rich chocolate frosting.",
-          "src": "../Images/Menu Items/Cosmic_Brownie.jpeg",
+          "src": "../Images/MenuItems/Cosmic_Brownie.jpeg",
           "price": 4.99
         },
         {
           "item_name": "Signature Milkshake",
           "description": "Fudgy brownie topped with colorful candy-coated chocolate pieces and a rich chocolate frosting.",
-          "src": "../Images/Menu Items/Signature_Milkshake.jpeg",
+          "src": "../Images/MenuItems/Signature_Milkshake.jpeg",
           "price": 8.99
         }
       ]
