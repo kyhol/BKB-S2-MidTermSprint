@@ -24,7 +24,11 @@
     top: 0;
     z-index: 1000;
   }
-
+.bannermascot {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 .bannermascot img {
   width: 6rem;
   height: 6rem;
@@ -44,15 +48,17 @@
 
 .bannerbuttons {
   display: flex;
-  gap: 1rem;
-  margin-right: 10rem;
+  gap: 0.5rem;
 }
-
+.bannerbuttons button {
+ border: none;
+ padding: 1.5rem 3rem;
+ margin-right: 5rem;
+}
 .bannerbutton {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 9.625rem;
   height: 3rem;
   opacity: 0.95;
   border-radius: 1.5rem;
@@ -154,7 +160,9 @@
 #next:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
-
+.dots .active {
+    background-color: purple;
+}
 .dots {
   display: flex;
   justify-content: center;
@@ -177,9 +185,6 @@
   transition: background-color 0.6s ease;
 }
 
-.active {
-  background-color: purple;
-}
 
 .fade {
   animation-name: fade;
@@ -323,11 +328,12 @@ h2 {
   display: flex;
   justify-content: center;
     align-items: flex-end;
-    width:31rem;
     border-radius: 70.5rem;
 }
 .deliverMenuContainer img{
-    border-radius: 2rem;
+    border-radius: 3.1rem;
+    min-width: 30rem;
+    min-height: 30rem;
 }
 .menuButtonContainer {
     width: 67.5rem;
@@ -516,20 +522,17 @@ h2 {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  * {
-    /* Reset box-sizing and adjust default font size for tablet */
-    box-sizing: border-box;
-    font-size: 14px;
-  }
 
   .bannertop {
-    height: 40px;
+    height: 48px;
     padding: 0 0.25rem;
+
   }
 
   .bannermascot img {
     width: 3rem;
     height: 3rem;
+    
   }
 
   .garybannertext a {
@@ -537,7 +540,7 @@ h2 {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgba(0, 0, 0, 0.7);
     font-family: "Raleway", sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
   }
 
@@ -545,11 +548,15 @@ h2 {
     font-size: 0.8rem;
   }
   .bannerbuttons {
-    margin-right: 2.5rem;
+    font-size: 0.5rem;
   }
-
+  .bannerbuttons button {
+    border: none;
+    padding: .75rem 1.5rem;
+    margin-right: 0rem;
+   }
   .bannerbutton {
-    width: 6.625rem;
+    padding: 1rem 2rem;
     height: 2rem;
   }
 
@@ -675,14 +682,9 @@ h2 {
 }
 
 @media screen and (max-width: 767px) {
-  * {
-    /* Reset box-sizing and adjust default font size for mobile */
-    box-sizing: border-box;
-    font-size: 14px;
-  }
 
   .bannertop {
-    height: 40px;
+    height: 48px;
     padding: 0 0.25rem;
   }
 
@@ -690,30 +692,39 @@ h2 {
     width: 3rem;
     height: 3rem;
   }
-
+  .bannermaskot {
+    gap:0.1rem;
+  }
   .garybannertext {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     margin-right: 0.3rem;
     padding: 0.1rem;
   }
 
+  .bannerbuttons button {
+    border: none;
+    margin-right: 0;
+    padding: 1rem 2rem;
+   }
   .garybannertext a {
     color: #e8f7fb;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgba(0, 0, 0, 0.7);
     font-family: "Raleway", sans-serif;
     font-weight: 700;
+    font-size: 1.5rem;
   }
   .garybannertext {
-    font-size: 0.8rem;
+    font-family: 'Raleway';
+    font-weight: 800;
   }
   .bannerbuttons {
     margin-right: 2.5rem;
   }
 
   .bannerbutton {
-    width: 6.625rem;
-    height: 2rem;
+    width: 3rem;
+    height: 1.5rem;
   }
 
   .bannerbuttontext {
@@ -794,6 +805,7 @@ h2 {
     align-content: center;
     justify-content: center;
     height: 2rem;
+    width: 7rem;
   }
 
   .delMenuButtonText,
@@ -845,4 +857,63 @@ h2 {
     margin: 64px 32px;
     flex-direction: column;
   }
+}
+
+
+@media screen and (min-width: 360px) and (max-width: 479px) {
+    .bannerbuttons{
+        display:flex;
+        justify-content: flex-end;
+        border: none;
+        margin-right: 0;
+        padding: 1rem 2rem;
+    }
+    .garybannertext a {
+        font-size: 0.9rem;
+    }
+    .deliverMenuContainer img{
+        border-radius: 3.1rem;
+        min-width: 10rem;
+        min-height: 10rem;
+    }
+    .slider-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        min-width: 10rem;
+        min-height: 10rem;
+    }
+
+    .newcontainer{
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newcontainer li {
+        background-color: #023047;
+        align-content: center;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        width:10rem;
+        padding: 10px;
+        margin-bottom: 5px;
+        font-size: 1em;
+        color: #e8f7fb;
+        font-family: "Poppins";
+    }
+    .newcontainer ul{
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .delMenuButton1 {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        height: 1.5rem;
+        width: 4rem;
+    }
 }
