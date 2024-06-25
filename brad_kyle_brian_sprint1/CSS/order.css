@@ -1,13 +1,10 @@
 /* Elements, with minimal logical exceptions, are arranged in the order they appear in the HTML file. */
-
-
 .main-container {
   font-family: "poppins";
   color:#da722c;
 }
 
 /* Pop-up on submit: */
-
 #orderContainer {
   display: none;
   background-color: #e8f7fb;
@@ -82,7 +79,6 @@ h1 {
 }
 
 /* Main columns: */
-
 #columns {
   display: flex;
   flex-direction: row;
@@ -153,7 +149,6 @@ h1 {
 }
 
 /* Address autocomplete (some elements from brad_kyle_brian_sprint1/Scripts/address.js) */
-
 #address {
   flex: 1;
   outline: none;
@@ -218,7 +213,6 @@ h1 {
 }
 
 /* Other inputs: */
-
 #name,
 #phone,
 #email,
@@ -265,7 +259,6 @@ input {
 }
 
 /* Order display window: */
-
 #orderinnerhtml {
   min-height: 250px;
   overflow-y: scroll;
@@ -346,6 +339,11 @@ input {
 }
 
 /* MEDIA QUERIES */
+@media (max-width: 900px) {
+  #orderinnerhtml p {
+    font-size: 0.85rem;
+  }
+
 /* Tablet View */
 @media (max-width: 768px) {
   #feedMe {
