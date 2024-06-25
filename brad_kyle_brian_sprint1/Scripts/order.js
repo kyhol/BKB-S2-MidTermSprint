@@ -1,10 +1,11 @@
-function orderAlert(msg, gfg) {
+function orderAlert(msg) {
   var confirmBox = document.getElementById("orderContainer");
 
   confirmBox.querySelector("#message").textContent = msg;
 
   confirmBox.querySelector("#closeButton").onclick = function () {
     confirmBox.style.display = "none";
+    localStorage.removeItem("cart");
   };
 
   confirmBox.style.display = "flex";
@@ -81,11 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (valid) {
       orderAlert(
         "Thank you for your order!\nHang tight, Gary is getting your goodies\nready to GO!",
-        function () {
-          console.log("Alert confirmed");
-          localStorage.removeItem("cart");
-        }
-      );
+        );
     }
   });
 });
