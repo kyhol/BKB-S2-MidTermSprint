@@ -80,11 +80,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (valid) {
       orderAlert(
-      "Thank you for your order!\nHang tight, Gary is getting your goodies\nready to GO!",
-      function () {
-        console.log("Alert confirmed");
-        localStorage.removeItem("cart");
-      }
+        "Thank you for your order!\nHang tight, Gary is getting your goodies\nready to GO!",
+        function () {
+          console.log("Alert confirmed");
+          localStorage.removeItem("cart");
+        }
       );
     }
   });
@@ -130,7 +130,9 @@ document.addEventListener("DOMContentLoaded", function () {
             <button class="increment" data-index="${i}">
             <img src="../Images/OrderPics/add.svg" alt="+">
             </button></div></div>
-            <div class="itemtotal"><div><p>  = &nbsp;</p></div><div><p>\$${itemTotal.toFixed(2)}</p>
+            <div class="itemtotal"><div><p>  = &nbsp;</p></div><div><p>\$${itemTotal.toFixed(
+              2
+            )}</p>
             </div>
             </div>
           </div>
