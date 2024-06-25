@@ -14,7 +14,7 @@ function show_image(i) {
     var images = document.getElementsByClassName("foodImage");
     var dots = document.getElementsByClassName("dot");
     
-    for (var j = 0; j < images.length; j++) {
+    for (var j = 0; j < images.length; j++) { 
         images[j].style.display = "none";
     }
 
@@ -64,10 +64,10 @@ function showImage(carouselId, i) { //Image carousel function copied and edited 
 
 
 document.addEventListener('DOMContentLoaded', function () { // display list of hours of operation, address, contact, and details.
-    fetch('../Data/restaurant_data.json')
+    fetch('../Data/restaurant_data.json') //fetch from .json file I created. 
         .then(response => {
             if (!response.ok) {
-                throw new Error('Response failed');
+                throw new Error('Response failed'); //No errors!
             }
             return response.json();
         })
@@ -116,20 +116,6 @@ document.addEventListener('DOMContentLoaded', function () { // display list of h
         .catch(error => console.error('Error fetching data:', error));
 });
 
-// fetch('../Data/restaurant_data.json')
-//     .then(response => {
-//         if (!response.ok) {
-//             throw new Error('Response failed');
-//         }
-//         return response.json();
-//     })
-//     .then(data => {
-//         console.log('Data fetched successfully:', data); // Log the fetched data
-
-//         // Your existing code for displaying the JSON data
-//     })
-//     .catch(error => console.error('Error fetching data:', error)); // Log any errors that occur during the fetch
-
 document.addEventListener('DOMContentLoaded', () => {  //function used in conjunction with CSS to animate the letters starting on the left and going through to the right at .2s intervals
     const letters = document.querySelectorAll('.letter');
     letters.forEach((letter, index) => {
@@ -162,7 +148,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 1000); // Wait for the fade-out transition to complete
     }
 
-    setInterval(showNextImage, 5000);
+    setInterval(showNextImage, 5000); // 5 seconds interval to show the next image
     showNextImage(); // Show the first image immediately
 });
 
+// fetch('../Data/restaurant_data.json')
+//     .then(response => {
+//         if (!response.ok) {
+//             throw new Error('Response failed');
+//         }
+//         return response.json();
+//     })
+//     .then(data => {
+//         console.log('Data fetched successfully:', data); // Log the fetched data
+
+//         // Your existing code for displaying the JSON data
+//     })
+//     .catch(error => console.error('Error fetching data:', error)); // Log any errors that occur during the fetch
