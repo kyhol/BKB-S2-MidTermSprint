@@ -129,6 +129,10 @@ window.addEventListener("DOMContentLoaded", function () {
         // Store updated cart back into localStorage
         localStorage.setItem("cart", JSON.stringify(cart));
 
+        // Update cart count in the header
+        const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+        document.getElementById("cart-count").innerText = cartCount;
+
         // Show notification popup
         showPopup(`${name} added to cart!`);
       }
