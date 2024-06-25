@@ -11,18 +11,12 @@ show_image(index); // Function to display the image carousel on the home page. w
 function show_image(i) {
   index += i;
 
-
-function showImage(carouselId, i) { //Image carousel function copied and edited from above, serves the same purpose but I decided not to use the dots on this one.
-    if (carouselId === 'review1') {
-        index1 += i;
-        var images = document.getElementById('slider-container1').getElementsByClassName("reviewPics");
-        var dots = document.getElementById('slider-container1').getElementsByClassName("dot");
+    var images = document.getElementsByClassName("foodImage");
+    var dots = document.getElementsByClassName("dot");
+    
+    for (var j = 0; j < images.length; j++) { 
+        images[j].style.display = "none";
     }
-
-
-  for (var j = 0; j < images.length; j++) {
-    images[j].style.display = "none";
-  }
 
   for (var j = 0; j < dots.length; j++) {
     dots[j].className = dots[j].className.replace(" active", "");
@@ -73,17 +67,16 @@ function showImage(carouselId, i) {
   images[carouselId === "review1" ? index1 : index2].style.display = "flex";
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  // display list of hours of operation, address, contact, and details.
-  fetch("../Data/restaurant_data.json")
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Response failed");
-      }
-      return response.json();
-    })
-    .then((data) => {
-      console.log("Data fetched successfully:", data); // Log the fetched data
+document.addEventListener('DOMContentLoaded', function () { // display list of hours of operation, address, contact, and details.
+    fetch('../Data/restaurant_data.json') //fetch from .json file I created. 
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Response failed'); //No errors!
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Data fetched successfully:', data); // Log the fetched data
 
       const restaurant = data.restaurant;
       const addressElement = document.getElementById("address");
@@ -128,20 +121,6 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => console.error("Error fetching data:", error));
 });
 
-// fetch('../Data/restaurant_data.json')
-//     .then(response => {
-//         if (!response.ok) {
-//             throw new Error('Response failed');
-//         }
-//         return response.json();
-//     })
-//     .then(data => {
-//         console.log('Data fetched successfully:', data); // Log the fetched data
-
-//         // Your existing code for displaying the JSON data
-//     })
-//     .catch(error => console.error('Error fetching data:', error)); // Log any errors that occur during the fetch
-
 document.addEventListener("DOMContentLoaded", () => {
   //function used in conjunction with CSS to animate the letters starting on the left and going through to the right at .2s intervals
   const letters = document.querySelectorAll(".letter");
@@ -175,6 +154,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 1000); // Wait for the fade-out transition to complete
     }
 
-    setInterval(showNextImage, 5000);
+    setInterval(showNextImage, 5000); // 5 seconds interval to show the next image
     showNextImage(); // Show the first image immediately
 });
+
+// fetch('../Data/restaurant_data.json')
+//     .then(response => {
+//         if (!response.ok) {
+//             throw new Error('Response failed');
+//         }
+//         return response.json();
+//     })
+//     .then(data => {
+//         console.log('Data fetched successfully:', data); // Log the fetched data
+
+//         // Your existing code for displaying the JSON data
+//     })
+//     .catch(error => console.error('Error fetching data:', error)); // Log any errors that occur during the fetch

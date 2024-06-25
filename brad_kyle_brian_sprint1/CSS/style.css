@@ -8,6 +8,8 @@
   padding: 16px;
   position: relative;
 }
+
+/* Banner global CSS */
 .bannertop {
   position: static;
   width: 100%;
@@ -116,7 +118,10 @@
   letter-spacing: 0.1rem;
   box-shadow: 0 0 35px rgba(255, 255, 255, 0.5);
 }
-footer {
+
+/* Banner css end */
+
+footer {  
   display: flex;
   flex-direction: row;
   background-color: #023047;
