@@ -289,6 +289,11 @@ input {
   padding: 0;
 }
 
+#orderinnerhtml button img{
+  min-width: 12px;
+  min-height: 12px;
+}
+
 .orderItem {
   display: flex;
   flex-direction: row;
