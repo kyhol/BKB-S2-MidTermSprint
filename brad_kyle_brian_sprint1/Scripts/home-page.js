@@ -6,7 +6,7 @@
 
 var index = 0;
 
-show_image(index); // Function to show the image carousel on the home page. with the dots at the bottom to show which image is currently being displayed.
+show_image(index); // Function to display the image carousel on the home page. with the dots at the bottom to show which image is currently being displayed. It goes left and right one, with the images hidden unless you press the onclick button hard coded in the html.
 
 function show_image(i) {
     index += i;
@@ -37,7 +37,7 @@ var index2 = 0;
 
 showImage('review1', index1);
 
-function showImage(carouselId, i) { //Image carousel function copied and edited from above.
+function showImage(carouselId, i) { //Image carousel function copied and edited from above, serves the same purpose but I decided not to use the dots on this one.
     if (carouselId === 'review1') {
         index1 += i;
         var images = document.getElementById('slider-container1').getElementsByClassName("reviewPics");
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {  //function used in conjun
     });
 });
 
-
+//Cycles through 3 images in the deliverMenuContainer div every 5 seconds.
 document.addEventListener("DOMContentLoaded", function() {
     const deliverMenuContainer = document.querySelector('.deliverMenuContainer');
     const image = document.createElement('img');  // Create an img element
