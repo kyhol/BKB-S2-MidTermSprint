@@ -6,13 +6,19 @@
 
 var index = 0;
 
-show_image(index); // Function to show the image carousel on the home page. with the dots at the bottom to show which image is currently being displayed.
+show_image(index); // Function to display the image carousel on the home page. with the dots at the bottom to show which image is currently being displayed. It goes left and right one, with the images hidden unless you press the onclick button hard coded in the html.
 
 function show_image(i) {
   index += i;
 
-  var images = document.getElementsByClassName("foodImage");
-  var dots = document.getElementsByClassName("dot");
+
+function showImage(carouselId, i) { //Image carousel function copied and edited from above, serves the same purpose but I decided not to use the dots on this one.
+    if (carouselId === 'review1') {
+        index1 += i;
+        var images = document.getElementById('slider-container1').getElementsByClassName("reviewPics");
+        var dots = document.getElementById('slider-container1').getElementsByClassName("dot");
+    }
+
 
   for (var j = 0; j < images.length; j++) {
     images[j].style.display = "none";
@@ -146,28 +152,29 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const deliverMenuContainer = document.querySelector(".deliverMenuContainer");
-  const image = document.createElement("img"); // Create an img element
-  deliverMenuContainer.appendChild(image); // Append the img element to the container
+//Cycles through 3 images in the deliverMenuContainer div every 5 seconds.
+document.addEventListener("DOMContentLoaded", function() {
+    const deliverMenuContainer = document.querySelector('.deliverMenuContainer');
+    const image = document.createElement('img');  // Create an img element
+    deliverMenuContainer.appendChild(image);  // Append the img element to the container
 
-  const imagePaths = [
-    "../Images/MenuAd/MenuAd.svg",
-    "../Images/MenuAd/MenuAd2.svg",
-    "../Images/MenuAd/MenuAd3.svg",
-  ];
-  let currentIndex = 0;
+    const imagePaths = [
+        '../Images/MenuAd/MenuAd.svg', 
+        '../Images/MenuAd/MenuAd2.svg', 
+        '../Images/MenuAd/MenuAd3.svg'
+    ];
+    let currentIndex = 0;
 
-  function showNextImage() {
-    image.classList.remove("active"); // Remove the active class to start the fade-out transition
+    function showNextImage() {
+        image.classList.remove('active'); // Remove the active class to start the fade-out transition
 
-    setTimeout(() => {
-      image.src = imagePaths[currentIndex]; // Change the image source
-      image.classList.add("active"); // Add the active class to start the fade-in transition
-      currentIndex = (currentIndex + 1) % imagePaths.length; // Wrap around using modulo
-    }, 1000); // Wait for the fade-out transition to complete
-  }
+        setTimeout(() => {
+            image.src = imagePaths[currentIndex]; // Change the image source
+            image.classList.add('active'); // Add the active class to start the fade-in transition
+            currentIndex = (currentIndex + 1) % imagePaths.length; // Wrap around using modulo
+        }, 1000); // Wait for the fade-out transition to complete
+    }
 
-  setInterval(showNextImage, 5000);
-  showNextImage(); // Show the first image immediately
+    setInterval(showNextImage, 5000);
+    showNextImage(); // Show the first image immediately
 });

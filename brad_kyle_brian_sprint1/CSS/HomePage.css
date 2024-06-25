@@ -4,8 +4,6 @@
  Date content done: 2024-06-20
  Date polish finished: 2024-06-27
 
-/* HEADER CSS */
-
 /* MAIN LAYOUT CONTAINER */
 .container {
   width: 85.125rem;
@@ -58,6 +56,7 @@
 #prev:hover,
 #next:hover {
   background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
 }
 .dots .active {
   background-color: purple;
@@ -88,7 +87,8 @@
   animation-name: fade;
   animation-duration: 1.5s;
 }
-@keyframes fade {
+/* fading by using opacity */
+@keyframes fade { 
   from {
     opacity: 0.4;
   }
@@ -230,6 +230,8 @@ h2 {
 #prevReview1:hover,
 #nextReview1:hover {
   background-color: #a34a0f;
+  filter: brightness(1.2);
+  transform: scale(1.05);
 }
 .deliverMenuContainer {
   display: flex;
