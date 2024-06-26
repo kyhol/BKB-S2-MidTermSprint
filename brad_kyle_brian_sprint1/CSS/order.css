@@ -1,7 +1,7 @@
 /* Elements, with minimal logical exceptions, are arranged in the order they appear in the HTML file. */
 .main-container {
   font-family: "poppins";
-  color:#da722c;
+  color: #da722c;
 }
 
 /* Pop-up on submit: */
@@ -69,7 +69,7 @@ h1 {
   border: 2px solid #da722c;
   margin-bottom: 8px;
   padding-top: 5px;
-  background-color: #F4ED95;
+  background-color: #f4ed95;
 }
 
 #headline img {
@@ -282,7 +282,7 @@ input {
   padding: 0;
 }
 
-#orderinnerhtml button img{
+#orderinnerhtml button img {
   min-width: 12px;
   min-height: 12px;
 }
@@ -342,26 +342,27 @@ input {
 @media (max-width: 900px) {
   #orderinnerhtml p {
     font-size: 0.85rem;
-}
-
-/* Tablet View */
-@media (max-width: 768px) {
-  #feedMe {
-    font-size: medium;
   }
 
-  #orderinnerhtml p {
-    font-size: 0.7rem;
-  }
-  #more {
-    font-size: small;
-  }
-}
+  /* Tablet View */
+  @media (max-width: 768px) {
+    #feedMe {
+      font-size: medium;
+    }
 
-/* Smartphone View */
-@media (max-width: 480px) {
-  #columns {
-    flex-direction: column;
-    font-size: small;
+    #orderinnerhtml p {
+      font-size: 0.7rem;
+    }
+    #more {
+      font-size: small;
+    }
+  }
+
+  /* Smartphone View */
+  @media (max-width: 480px) {
+    #columns {
+      flex-direction: column;
+      font-size: small;
+    }
   }
 }
