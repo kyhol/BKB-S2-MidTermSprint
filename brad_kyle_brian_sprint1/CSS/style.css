@@ -323,6 +323,7 @@ body {
     transform: scale(0.8);
   }
 }
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .bannertop {
     height: 48px;
