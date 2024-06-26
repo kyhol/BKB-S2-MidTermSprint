@@ -126,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
       letter.classList.add("animate");
     }, index * 200);
   });
+});
 
   //Cycles through 3 images in the deliverMenuContainer div every 5 seconds.
   document.addEventListener("DOMContentLoaded", function () {
