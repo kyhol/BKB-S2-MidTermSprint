@@ -11,7 +11,6 @@ show_image(index); // Function to display the image carousel on the home page. w
 function show_image(i) {
   index += i;
 
-
     var images = document.getElementsByClassName("foodImage");
     var dots = document.getElementsByClassName("dot");
     
@@ -23,42 +22,46 @@ function show_image(i) {
     dots[j].className = dots[j].className.replace(" active", "");
   }
 
-    images[index].style.display = "flex";
-    dots[index].className += " active";
+  if (index > images.length - 1) {
+    index = 0;
   }
-  var index1 = 0;
-  var index2 = 0;
+  if (index < 0) {
+    index = images.length - 1;
+  }
 
-  showImage("review1", index1);
+  images[index].style.display = "flex";
+  dots[index].className += " active";
+}
+var index1 = 0;
+var index2 = 0;
 
-  function showImage(carouselId, i) {
-    //Image carousel function copied and edited from above.
-    if (carouselId === "review1") {
-      index1 += i;
-      var images = document
-        .getElementById("slider-container1")
-        .getElementsByClassName("reviewPics");
-      var dots = document
-        .getElementById("slider-container1")
-        .getElementsByClassName("dot");
-    }
+showImage("review1", index1);
 
-    for (var j = 0; j < images.length; j++) {
-      images[j].style.display = "none";
-    }
+function showImage(carouselId, i) {
+  //Image carousel function copied and edited from above.
+  if (carouselId === "review1") {
+    index1 += i;
+    var images = document
+      .getElementById("slider-container1")
+      .getElementsByClassName("reviewPics");
+    var dots = document
+      .getElementById("slider-container1")
+      .getElementsByClassName("dot");
+  }
 
-    for (var j = 0; j < dots.length; j++) {
-      dots[j].className = dots[j].className.replace(" active", "");
-    }
+  for (var j = 0; j < images.length; j++) {
+    images[j].style.display = "none";
+  }
 
-    if (carouselId === "review1" && index1 > images.length - 1) {
-      index1 = 0;
-    }
-    if (carouselId === "review1" && index1 < 0) {
-      index1 = images.length - 1;
-    }
+  for (var j = 0; j < dots.length; j++) {
+    dots[j].className = dots[j].className.replace(" active", "");
+  }
 
-    images[carouselId === "review1" ? index1 : index2].style.display = "flex";
+  if (carouselId === "review1" && index1 > images.length - 1) {
+    index1 = 0;
+  }
+  if (carouselId === "review1" && index1 < 0) {
+    index1 = images.length - 1;
   }
 
   images[carouselId === "review1" ? index1 : index2].style.display = "flex";
@@ -128,29 +131,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-  //Cycles through 3 images in the deliverMenuContainer div every 5 seconds.
-  document.addEventListener("DOMContentLoaded", function () {
-    const deliverMenuContainer = document.querySelector(
-      ".deliverMenuContainer"
-    );
-    const image = document.createElement("img"); // Create an img element
-    deliverMenuContainer.appendChild(image); // Append the img element to the container
+//Cycles through 3 images in the deliverMenuContainer div every 5 seconds.
+document.addEventListener("DOMContentLoaded", function() {
+    const deliverMenuContainer = document.querySelector('.deliverMenuContainer');
+    const image = document.createElement('img');  // Create an img element
+    deliverMenuContainer.appendChild(image);  // Append the img element to the container
 
     const imagePaths = [
-      "../Images/MenuAd/MenuAd.svg",
-      "../Images/MenuAd/MenuAd2.svg",
-      "../Images/MenuAd/MenuAd3.svg",
+        '../Images/MenuAd/MenuAd.svg', 
+        '../Images/MenuAd/MenuAd2.svg', 
+        '../Images/MenuAd/MenuAd3.svg'
     ];
     let currentIndex = 0;
 
     function showNextImage() {
-      image.classList.remove("active"); // Remove the active class to start the fade-out transition
+        image.classList.remove('active'); // Remove the active class to start the fade-out transition
 
-      setTimeout(() => {
-        image.src = imagePaths[currentIndex]; // Change the image source
-        image.classList.add("active"); // Add the active class to start the fade-in transition
-        currentIndex = (currentIndex + 1) % imagePaths.length; // Wrap around using modulo
-      }, 1000); // Wait for the fade-out transition to complete
+        setTimeout(() => {
+            image.src = imagePaths[currentIndex]; // Change the image source
+            image.classList.add('active'); // Add the active class to start the fade-in transition
+            currentIndex = (currentIndex + 1) % imagePaths.length; // Wrap around using modulo
+        }, 1000); // Wait for the fade-out transition to complete
     }
 
     setInterval(showNextImage, 5000); // 5 seconds interval to show the next image
