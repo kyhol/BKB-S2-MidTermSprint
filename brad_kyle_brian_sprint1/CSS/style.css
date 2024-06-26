@@ -119,9 +119,10 @@
   box-shadow: 0 0 35px rgba(255, 255, 255, 0.5);
 }
 
+
 /* Banner css end */
 
-footer {
+footer {  
   display: flex;
   flex-direction: row;
   background-color: #023047;
@@ -327,6 +328,7 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+ 
   .bannertop {
     height: 48px;
     padding: 0 0.25rem;
@@ -360,6 +362,7 @@ body {
   }
   .button-inside {
     gap: 0.25rem;
+
   }
   .bannerbuttontext {
     font-size: 0.875rem;
@@ -433,12 +436,12 @@ body {
     padding-bottom: 1.8rem;
   }
   .bannerbuttons button {
-    border: none;
-    margin-right: 0;
-    padding: 0.5rem 1rem;
-    height: 2rem;
-    width: 5rem;
-  }
+  border: none;
+  margin-right: 0;
+  padding: 0.5rem 1rem;
+  height: 2rem; 
+  width: 5rem;
+}
 }
 @media screen and (min-width: 360px) and (max-width: 479px) {
   .bannerbuttons {
