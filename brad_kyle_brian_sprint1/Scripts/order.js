@@ -1,10 +1,11 @@
-function orderAlert(msg, gfg) {
+function orderAlert(msg) {
   var confirmBox = document.getElementById("orderContainer");
 
   confirmBox.querySelector("#message").textContent = msg;
 
   confirmBox.querySelector("#closeButton").onclick = function () {
     confirmBox.style.display = "none";
+    localStorage.removeItem("cart");
   };
 
   confirmBox.style.display = "flex";
@@ -81,11 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (valid) {
       orderAlert(
         "Thank you for your order!\nHang tight, Gary is getting your goodies\nready to GO!",
-        function () {
-          console.log("Alert confirmed");
-          localStorage.removeItem("cart");
-        }
-      );
+        );
     }
   });
 });
@@ -148,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
       `;
+
     } else {
       orderInnerHtml.innerHTML =
         "<p>Why don't you treat yourself to one of Gary's special treats?</p>";
@@ -183,7 +181,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Save the updated cart back to localStorage
     localStorage.setItem("cart", JSON.stringify(cartItems));
-
+    
+    // Update the cart count
+    const cartCount2 = cartItems.reduce((total, item) => total + item.quantity, 0);
+    document.getElementById("cart-count").innerText = cartCount2;
+    
     // Re-render the cart items
     renderCart();
   }

@@ -12,8 +12,8 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 950px;
-  height: 500px;
+  width: 95%;
+  min-height: 500px;
   border-radius: 25px;
   padding: 16px 8px 8px;
   box-sizing: border-box;
@@ -342,7 +342,7 @@ input {
 @media (max-width: 900px) {
   #orderinnerhtml p {
     font-size: 0.85rem;
-  }
+}
 
 /* Tablet View */
 @media (max-width: 768px) {
