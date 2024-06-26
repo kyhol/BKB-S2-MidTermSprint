@@ -323,3 +323,127 @@ body {
     transform: scale(0.8);
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .bannertop {
+    height: 48px;
+    padding: 0 0.25rem;
+  }
+
+  .bannermascot img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .garybannertext a {
+    color: #e8f7fb;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.7);
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .garybannertext {
+    font-size: 0.8rem;
+  }
+  .bannerbuttons {
+    font-size: 0.5rem;
+  }
+  .bannerbuttons button {
+    border: none;
+    padding: 0.75rem 1.5rem;
+  }
+  .bannerbutton {
+    padding: 1rem 2rem;
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .bannerbuttontext {
+    font-size: 0.875rem;
+  }
+  .bannerbottom {
+    height: 3rem;
+  }
+
+  .bannerbottombutton {
+    width: 15rem;
+    height: 2rem;
+    padding-bottom: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bannertop {
+    height: 48px;
+    padding: 0 0.25rem;
+  }
+
+  .bannermascot img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .bannermaskot {
+    gap: 0.1rem;
+  }
+  .garybannertext {
+    font-size: 1.1rem;
+    margin-right: 0.3rem;
+    padding: 0.1rem;
+  }
+
+  .bannerbuttons button {
+    border: none;
+    margin-right: 0;
+    padding: 1rem 2rem;
+  }
+  .garybannertext a {
+    color: #e8f7fb;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.7);
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  .garybannertext {
+    font-family: "Raleway";
+    font-weight: 800;
+  }
+  .bannerbuttons {
+    margin-right: 2.5rem;
+  }
+
+  .bannerbutton {
+    width: 3rem;
+    height: 1.5rem;
+  }
+
+  .bannerbuttontext {
+    font-size: 0.875rem;
+  }
+  .bannerbottom {
+    height: 3rem;
+  }
+
+  .bannerbottombutton {
+    width: 15rem;
+    height: 2rem;
+    padding-bottom: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 479px) {
+  .bannerbuttons {
+    display: flex;
+    justify-content: flex-end;
+    border: none;
+    margin-right: 0;
+    padding: 1rem 2rem;
+  }
+  .garybannertext a {
+    font-size: 0.9rem;
+  }
+}
