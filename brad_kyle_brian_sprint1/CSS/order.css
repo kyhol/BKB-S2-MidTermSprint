@@ -263,7 +263,8 @@ input[type="radio"] {
   background-color: #e8f7fb;
   margin: 10px 0 10px 0;
   min-height: 100px;
-  padding: 15px 10px 5px 15px;
+  padding: 1rem;
+  box-shadow: 4px 4px 5px 1px rgba(69, 69, 69, 1);
 }
 
 label input{
@@ -277,9 +278,10 @@ label input{
 
 .pment {
   background-color: #e8f7fb;
-  padding: 5px;
+  padding: 1rem;
   width: 100%;
   margin-top: 10px;
+  box-shadow: 4px 4px 5px 1px rgba(69, 69, 69, 1);
 }
 
 input {
