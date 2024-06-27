@@ -121,12 +121,24 @@ h1 {
   z-index: 0;
 }
 
+#contactinputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 40%;
+}
+
 input[type="radio"] {
   margin-left: 10px;  
 }
 
 #ordertext {
   z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 5px;
 }
 
 #morediv {
@@ -231,7 +243,7 @@ input[type="radio"] {
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 10px;
   font-size: 16px;
-  margin: 15px 0 15px 0;
+  margin: 3% 0 3% 0;
   width: 100%;
   box-shadow: #6f7dfb 0 0 5px;
 }
@@ -251,17 +263,23 @@ input[type="radio"] {
   background-color: #e8f7fb;
   margin: 10px 0 10px 0;
   min-height: 100px;
-  padding: 5px 10px 5px 10px;
+  padding: 15px 10px 5px 15px;
+}
+
+label input{
+  width:4rem;
+  margin-left: 5px;
 }
 
 #ordertime {
   max-width: 100%;
 }
 
-#pment {
+.pment {
   background-color: #e8f7fb;
   padding: 5px;
   width: 100%;
+  margin-top: 10px;
 }
 
 input {
@@ -277,12 +295,6 @@ input {
   word-spacing: fill;
   border: #6f7dfb 1px solid;
   padding: 16px;
-}
-
-#orderinnerhtml p {
-  margin: 10px 0;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 1rem;
 }
 
 #orderinnerhtml button {
@@ -302,6 +314,11 @@ input {
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+  margin: 10px 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
 }
 
 .itemname {
@@ -309,6 +326,7 @@ input {
   flex-direction: row;
   justify-content: space-between;
   text-justify: distribute;
+  width: 40%;
 }
 
 .itemtotal {
@@ -316,6 +334,7 @@ input {
   flex-direction: row;
   justify-content: space-between;
   text-justify: distribute;
+  width: 33.33%;
 }
 
 .buttons {
@@ -324,6 +343,7 @@ input {
   justify-content: space-between;
   align-items: center;
   gap: 8px;
+  width: 33.33%;
 }
 
 .quantity-and-cost {
@@ -331,6 +351,7 @@ input {
   justify-content: space-evenly;
   align-items: center;
   gap: 16px;
+  width: 60%;
 }
 
 .order-cost-info {
@@ -346,13 +367,17 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: space-between;
-}
+  margin: 0px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  }
 
 /* MEDIA QUERIES */
 @media (max-width: 900px) {
   #orderinnerhtml p {
     font-size: 0.85rem;
   }
+}
 
   /* Tablet View */
   @media (max-width: 768px) {
@@ -366,7 +391,7 @@ input {
     #more {
       font-size: small;
     }
-  }
+}
 
   /* Smartphone View */
   @media (max-width: 480px) {
@@ -375,4 +400,3 @@ input {
       font-size: small;
     }
   }
-}
