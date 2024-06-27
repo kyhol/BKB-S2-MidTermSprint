@@ -81,8 +81,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (valid) {
       orderAlert(
-        "Thank you for your order!\nHang tight, Gary is getting your goodies\nready to GO!",
-        );
+        "Thank you for your order!\nHang tight, Gary is getting your goodies\nready to GO!"
+      );
     }
   });
 });
@@ -96,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (data) {
       const cartItems = JSON.parse(data);
       let subTotal = 0;
+      let tip = 0;
       for (let i = 0; i < cartItems.length; i++) {
         let item = cartItems[i]["name"];
         let price = cartItems[i]["price"];
@@ -104,54 +105,81 @@ document.addEventListener("DOMContentLoaded", function () {
         subTotal += itemTotal;
         orderInnerHtml.innerHTML += `
         <div class="orderItem">  
-  <div class="itemname">
-    <p>${item}:</p>
-  </div>
-  <div class="quantity-and-cost">
-    <div class="itemtotal">
-      <div>
-        <p>\$${price.toFixed(2)}</p>
-      </div>
-      <div>
-        <p>&nbsp;x </p>
-      </div>
-    </div> 
-    <div class="buttons">
-      <div>
-        <button class="decrement" data-index="${i}">
-          <img src="../Images/OrderPics/sub.svg" alt="-">
-        </button>
-      </div>
-      <div>
-        <p>${quantity}</p>
-      </div>
-      <div>
-        <button class="increment" data-index="${i}">
-          <img src="../Images/OrderPics/add.svg" alt="+">
-        </button>
-      </div>
-    </div>
-    <div class="itemtotal">
-      <div>
-        <p>  = &nbsp;</p>
-      </div>
-      <div>
-        <p>\$${itemTotal.toFixed(2)}</p>
-      </div>
-    </div>
-  </div>
-</div>
+          <div class="itemname">
+            <p>${item}:</p>
+          </div>
+          <div class="quantity-and-cost">
+            <div class="itemtotal">
+              <div>
+                <p>\$${price.toFixed(2)}</p>
+              </div>
+              <div>
+                <p>&nbsp;x </p>
+              </div>
+            </div> 
+            <div class="buttons">
+              <div>
+                <button class="decrement" data-index="${i}">
+                  <img src="../Images/OrderPics/sub.svg" alt="-">
+                </button>
+              </div>
+              <div>
+                <p>${quantity}</p>
+              </div>
+              <div>
+                <button class="increment" data-index="${i}">
+                  <img src="../Images/OrderPics/add.svg" alt="+">
+                </button>
+              </div>
+            </div>
+            <div class="itemtotal">
+              <div>
+                <p>  = &nbsp;</p>
+              </div>
+              <div>
+                <p>\$${itemTotal.toFixed(2)}</p>
+              </div>
+            </div>
+          </div>
+        </div>
         `;
       }
-      orderInnerHtml.innerHTML += `
-        <hr>
-        <div class="order-cost-info">
-          <p>Subtotal: <span>$${subTotal.toFixed(2)}</span> </p>
-          <p>Tax: <span>$${(subTotal * 0.15).toFixed(2)}</span></p>
-          <p>Total: <span>$${(subTotal * 1.15).toFixed(2)}</span></p>
-        </div>
 
+      function updateTipAndTotal() {
+        const tipType = document.querySelector('input[name="tip"]:checked').value;
+        let tip = 0;
+        if (tipType === 'percent') {
+          const percentValue = document.querySelector('input[name="percent"]:checked').value;
+          tip = (subTotal * percentValue) / 100;
+        } else if (tipType === 'amount') {
+          const fixedAmount = document.getElementById('fixedAmount').value;
+          if (!isNaN(fixedAmount) && fixedAmount.trim() !== '') {
+            tip = parseFloat(fixedAmount);
+          } else {
+            tip = 0;
+          }
+        }
+        document.querySelector(".order-cost-info span.tip-amount").textContent = `$${tip.toFixed(2)}`;
+        document.querySelector(".order-cost-info span.total-amount").textContent = `$${((subTotal * 1.15) + tip).toFixed(2)}`;
+      }
+
+      orderInnerHtml.innerHTML += `
+        <div class="order-cost-info">
+          <p>Subtotal:&nbsp;<span>$${subTotal.toFixed(2)}</span> </p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tax:&nbsp;<span>$${(subTotal * 0.15).toFixed(2)}</span></p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tip:&nbsp;<span class="tip-amount">$${tip.toFixed(2)}</span></p>
+          <hr>
+          <p>&nbsp;&nbsp;&nbsp;Total:&nbsp;<span class="total-amount">$${((subTotal * 1.15) + tip).toFixed(2)}</span></p>
+        </div>
       `;
+
+      // Attach event listeners to tip inputs
+      document.querySelectorAll('input[name="tip"], input[name="percent"], #fixedAmount').forEach(input => {
+        input.addEventListener('change', updateTipAndTotal);
+        input.addEventListener('input', updateTipAndTotal);
+      });
+
+      updateTipAndTotal();
 
     } else {
       orderInnerHtml.innerHTML =
@@ -188,11 +216,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Save the updated cart back to localStorage
     localStorage.setItem("cart", JSON.stringify(cartItems));
-    
+
     // Update the cart count
     const cartCount2 = cartItems.reduce((total, item) => total + item.quantity, 0);
     document.getElementById("cart-count").innerText = cartCount2;
-    
+
     // Re-render the cart items
     renderCart();
   }
