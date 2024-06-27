@@ -1,3 +1,7 @@
+// Bradley Ayers, kyle Hollet, Brian Janes
+// June 20-27, 2024
+// JS for the order page of the Gary Blue website for Midterm Sprint.
+
 function orderAlert(msg) {
   var confirmBox = document.getElementById("orderContainer");
 
