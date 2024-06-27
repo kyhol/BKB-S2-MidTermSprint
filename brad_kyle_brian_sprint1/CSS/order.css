@@ -103,6 +103,7 @@ h1 {
 
 #column1 {
   position: relative;
+  height: fit-content;
 }
 
 #column1 h2 {
@@ -134,7 +135,7 @@ input[type="radio"] {
 
 #ordertext {
   z-index: 1;
-  height: 100%;
+  height:100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -153,6 +154,15 @@ input[type="radio"] {
   max-height: 32px;
   text-wrap: nowrap;
   font-size: medium;
+}
+
+#percentLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+
 }
 
 #feedMe {
@@ -280,7 +290,7 @@ label input{
   background-color: #e8f7fb;
   padding: 1rem;
   width: 100%;
-  margin-top: 10px;
+  margin: 10px 0 10px 0;
   box-shadow: 4px 4px 5px 1px rgba(69, 69, 69, 1);
 }
 
@@ -392,6 +402,10 @@ input {
       font-size: 0.7rem;
     }
     #more {
+      font-size: small;
+    }
+
+    #tipForm {
       font-size: small;
     }
 }
